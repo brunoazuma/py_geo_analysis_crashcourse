@@ -1,7 +1,38 @@
 ---
-title: "Python for Geographic Data Analysis"
+title: "Python para Análise de Dados Geográficos"
 ---
 
-## Quarto
+## Visão geral
 
-Quarto enables you to weave together content and executable code into a finished document. To learn more about Quarto see <https://quarto.org>.
+Esta aula será dividida em três partes:
+
+::: {.incremental}
+1. Conceitos básicos de Python
+2. Introdução aos dados geográficos com Python
+3. Manipulação de dados geográficos com Python
+:::
+
+# Conceitos básicos de Python
+
+## Por que usar programação para análise de dados geográficos?
+
+::: {.incremental}
+- Automatização de tarefas repetitivas
+- Manipulação de grandes volumes de dados
+- Reprodutibilidade dos resultados
+- Preservação do histórico de operações
+:::
+
+## Por que usar Python para análise de dados geográficos?
+
+::: {.incremental}
+- Gratuito e de código aberto
+- Python é amigável para iniciantes
+- Ampla utilização no ecossistema de análise de dados
+- Grande interface com ferramentas e bibliotecas de análise de dados geográficos
+:::
+
+## Usando o Google Colab
+
+- Plataforma gratuita da Google para notebooks Jupyter baseados em nuvem
+- Permite a execução de código Python sem necessidade de configuração local
