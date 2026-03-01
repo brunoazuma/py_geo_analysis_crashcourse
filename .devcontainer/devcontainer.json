@@ -1,0 +1,29 @@
+{
+	"name": "Python 3.13 Data Science with Poetry",
+	"image": "mcr.microsoft.com/devcontainers/python:3.13-bookworm",
+	
+	"features": {
+		"ghcr.io/rocker-org/devcontainer-features/quarto-cli:1": {
+			"version": "1.7.34"
+		}
+	},
+
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+                "ms-toolsai.python-ds-extension-pack",
+				"quarto.quarto"
+			],
+			"settings": {
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"python.formatting.provider": "none"
+			}
+		}
+	},
+
+	"postCreateCommand": "pip install poetry && poetry install",
+
+	"remoteUser": "vscode"
+}
