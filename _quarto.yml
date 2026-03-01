@@ -4,6 +4,4 @@ project:
 
 author: "Bruno Azuma Balzano"
 format: revealjs
-toc: true
-number-sections: true
 bibliography: references.bib
