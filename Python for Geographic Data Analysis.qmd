@@ -32,7 +32,157 @@ Esta aula será dividida em três partes:
 - Grande interface com ferramentas e bibliotecas de análise de dados geográficos
 :::
 
-## Usando o Google Colab
+## Variáveis e tipos de dados
 
-- Plataforma gratuita da Google para notebooks Jupyter baseados em nuvem
-- Permite a execução de código Python sem necessidade de configuração local
+```{python}
+#| echo: true
+# Exemplo de variáveis e tipos de dados em Python
+nome = "João"  # String
+idade = 30  # Inteiro
+altura = 1.75  # Float
+peso = 70.5  # Float
+ativo = True  # Booleano
+```
+
+## Variáveis e tipos de dados
+
+```{python}
+#| echo: true
+
+imc = peso / (altura * altura)  # Cálculo do Índice de Massa Corporal
+print(f"O IMC de {nome} é: {imc:.2f}")
+```
+
+## Listas
+
+```{python}
+#| echo: true
+distritos_sp = [
+    "Sé",
+    "Itaquera",
+    "Jaçanã",
+    "Moema",
+    "Vila Mariana",
+]
+print(distritos_sp)
+```
+
+## Listas - Acessando elementos
+
+```{python}
+#| echo: true
+print(distritos_sp[0])  # Primeiro elemento
+print(distritos_sp[-1])  # Último elemento
+```
+
+## Listas - Operações básicas: adicionar
+```{python}
+#| echo: true
+distritos_sp.append("Butantã")  # Adiciona um novo elemento à lista
+print(distritos_sp)
+```
+
+## Listas - Operações básicas: invertendo a ordem
+
+```{python}
+#| echo: true
+distritos_sp.reverse() # Inverte a ordem dos elementos na lista
+print(distritos_sp)
+```
+
+## Listas - Operações básicas: ordenando os elementos
+```{python}
+#| echo: true
+distritos_sp.sort() # Ordena os elementos da lista em ordem alfabética
+print(distritos_sp)
+```
+
+## Laços - for
+
+```{python}
+#| echo: true
+# Exemplo ruim
+print(distritos_sp[0])
+print(distritos_sp[1])
+print(distritos_sp[2])
+print(distritos_sp[3])
+print(distritos_sp[4])
+print(distritos_sp[5])
+```
+
+## Laços - for
+
+```{.python}
+# Exemplo pior
+print(distritos_sp[6])
+```
+```
+---------------------------------------------------------------------------
+IndexError                                Traceback (most recent call last)
+Cell In[35], line 2
+      1 # Exemplo pior
+----> 2 print(distritos_sp[6])
+
+IndexError: list index out of range
+```
+
+## Laços - for
+```{python}
+#| echo: true
+# Exemplo bom
+for distrito in distritos_sp:
+    print(distrito)
+```
+
+## Declaração Condicional - if
+
+```{python}
+#| echo: true
+# Exemplo de declaração condicional
+if idade < 18:
+    print("Menor de idade")
+else:
+    print("Maior de idade")
+```
+
+## Declaração Condicional - if
+
+```{python}
+#| echo: true
+# Exemplo de declaração condicional
+if idade < 18:
+    print("Menor de idade")
+elif idade < 65:
+    print("Adulto")
+else:
+    print("Idoso")
+```
+
+## Declaração Condicional - if
+
+```{python}
+#| echo: true
+
+print(distritos_sp)
+
+for distrito in distritos_sp:
+    if "u" in distrito:
+        print(f"{distrito} é um distrito que possui a letra 'u'.")
+```
+
+## Funções
+
+
+```{python}
+#| echo: true
+# Exemplo de função
+def calcular_imc(peso, altura):
+    imc = peso / (altura * altura)
+    return imc
+
+nome_maria = "Maria"
+peso_maria = 60.0
+altura_maria = 1.65
+imc_maria = calcular_imc(peso_maria, altura_maria)
+print(f"O IMC de {nome_maria} é: {imc_maria:.2f}")
+```
