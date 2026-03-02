@@ -186,3 +186,200 @@ altura_maria = 1.65
 imc_maria = calcular_imc(peso_maria, altura_maria)
 print(f"O IMC de {nome_maria} é: {imc_maria:.2f}")
 ```
+
+# Análise de dados com Python
+
+## Tabelas
+
+[Wikipedia](https://pt.wikipedia.org/wiki/Lista_dos_distritos_de_S%C3%A3o_Paulo_por_popula%C3%A7%C3%A3o){preview-link="true"}
+
+## Abrindo tabelas com Python
+
+```{python}
+#| echo: true
+#| code-line-numbers: "|4|7|9|10|"
+import pandas as pd
+
+# Lendo a tabela diretamente da Wikipedia
+url = "https://pt.wikipedia.org/wiki/Lista_dos_distritos_de_S%C3%A3o_Paulo_por_popula%C3%A7%C3%A3o"
+
+# Configuração de headers para evitar bloqueio por parte do servidor
+headers = {"User-Agent": "Chrome/120.0.0.0"}
+
+tabela = pd.read_html(url, header=0, storage_options=headers)[1]
+tabela.head(2)  # Exibe as primeiras linhas da tabela
+```
+
+## Selecionando linhas
+
+```{python}
+#| echo: true
+# Selecionando pelo índice
+tabela.loc[1]
+```
+
+## Selecionando linhas
+
+```{python}
+#| echo: true
+# Selecionando pela posição
+tabela.iloc[1]
+```
+
+## Selecionando linhas
+
+```{python}
+#| echo: true
+# Selecionando pela posição
+tabela.iloc[-1]
+```
+
+## Selecionando linhas
+
+```{python}
+#| echo: true
+#| code-line-numbers: "4|"
+# Ordena a tabela pelo nome do distrito
+tabela.sort_values("Distrito", inplace=True)
+tabela.head(4)
+```
+
+## Selecionando linhas
+
+```{python}
+#| echo: true
+# Selecionando pelo índice
+tabela.loc[3]
+```
+
+## Selecionando linhas
+
+```{python}
+#| echo: true
+# Selecionando pela posição
+tabela.iloc[3]
+```
+
+## Selecionando colunas
+
+```{python}
+#| echo: true
+#| code-line-numbers: "4|"
+
+# Selecionando a coluna de população total
+tabela["Pop. Total 2022"].head(4)
+```
+
+## Selecionando colunas
+
+```{python}
+#| echo: true
+# Selecionando a coluna de população total e urbana
+colunas = ["Pop. Total 2022", "Pop. Urb. 2022"]
+tabela[colunas].head(4)
+```
+
+## Calculando estatísticas básicas
+
+```{python}
+#| echo: true
+# Calculando a média da população total
+media_pop_total = tabela["Pop. Total 2022"].mean()
+print(f"A média da população total dos distritos é: {media_pop_total:.0f}")
+```
+
+## Calculando estatísticas básicas
+
+```{python}
+#| echo: true
+# Calculando a soma da população total e urbana
+colunas = ["Pop. Total 2022", "Pop. Urb. 2022"]
+tabela[colunas].sum()
+```
+
+## Filtrando dados
+
+```{python}
+#| echo: true
+# Filtrando os distritos com população total maior que 100.000
+filtro = tabela["Pop. Total 2022"] > 100000
+tabela[filtro].head(4)
+```
+
+## Filtrando dados
+
+```{python}
+#| echo: true
+# Filtrando os distritos com população total diferente da população urbana
+filtro = tabela["Pop. Total 2022"] != tabela["Pop. Urb. 2022"]
+tabela[filtro].head(4)
+```
+
+## Criando novas colunas
+
+```{python}
+#| echo: true
+# Criando uma nova coluna de População Rural
+tabela["Pop. Rural 2022"] = tabela["Pop. Total 2022"] - tabela["Pop. Urb. 2022"]
+tabela.head(4)
+```
+
+## Criando novas colunas
+
+```{python}
+#| echo: true
+tabela.sort_values("Pop. Rural 2022", ascending=False).head(4)
+```
+
+## Criando novas colunas
+
+```{python}
+#| echo: true
+# Criando uma nova coluna de percentual de população rural
+tabela["% Pop. Rural 2022"] = 100 * tabela["Pop. Rural 2022"] / tabela["Pop. Total 2022"]
+tabela.sort_values("% Pop. Rural 2022", ascending=False).head(4)
+```
+
+## Renomeando colunas
+
+```{python}
+#| echo: true
+tabela.rename(columns={"Unnamed: 0": "Posto"}, inplace=True)
+tabela.head(4)
+```
+
+## Renomeando colunas
+
+```{python}
+#| echo: true
+# Criando coluna para os 10 distritos mais populosos
+tabela["Posto_numerico"] = tabela["Posto"].str.rstrip(".º").astype(int)
+tabela.sort_values("Posto_numerico", inplace=True)
+tabela.head(4)
+```
+
+## Renomeando colunas
+
+```{python}
+#| echo: true
+# Criando coluna para os 10 distritos mais populosos
+tabela["Dez mais populosos"] = tabela["Posto_numerico"] <= 10
+tabela.head(4)
+```
+
+## Agrupando e agregando dados
+
+```{python}
+#| echo: true
+# Agrupando por dez mais populosos e calculando a soma da população total
+tabela.groupby("Dez mais populosos")[["Pop. Total 2022"]].sum()
+```
+
+## Agrupando e agregando dados
+
+```{python}
+#| echo: true
+# Agrupando por dez mais populosos e calculando a soma da população total
+pop_total = tabela["Pop. Total 2022"].sum()
+tabela.groupby("Dez mais populosos")[["Pop. Total 2022"]].sum()/pop_total*100
+```

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="Python for Geographic Data Analysis_files/libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="Python for Geographic Data Analysis_files/libs/clipboard/clipboard.min.js"></script>
 <script src="Python for Geographic Data Analysis_files/libs/quarto-html/tabby.min.js"></script>
 <script src="Python for Geographic Data Analysis_files/libs/quarto-html/popper.min.js"></script>
 <script src="Python for Geographic Data Analysis_files/libs/quarto-html/tippy.umd.min.js"></script>
@@ -187,6 +187,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 </head>
 <body class="quarto-light">
   <div class="reveal">
@@ -238,7 +241,7 @@ Bruno Azuma Balzano
 </section>
 <section id="variáveis-e-tipos-de-dados" class="slide level2">
 <h2>Variáveis e tipos de dados</h2>
-<div id="c54c5906" class="cell" data-execution_count="1">
+<div id="59599a5c" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="co"># Exemplo de variáveis e tipos de dados em Python</span></span>
 <span id="cb1-2"><a href=""></a>nome <span class="op">=</span> <span class="st">"João"</span>  <span class="co"># String</span></span>
 <span id="cb1-3"><a href=""></a>idade <span class="op">=</span> <span class="dv">30</span>  <span class="co"># Inteiro</span></span>
@@ -249,7 +252,7 @@ Bruno Azuma Balzano
 </section>
 <section id="variáveis-e-tipos-de-dados-1" class="slide level2">
 <h2>Variáveis e tipos de dados</h2>
-<div id="c0abbece" class="cell" data-execution_count="2">
+<div id="48c879f4" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>imc <span class="op">=</span> peso <span class="op">/</span> (altura <span class="op">*</span> altura)  <span class="co"># Cálculo do Índice de Massa Corporal</span></span>
 <span id="cb2-2"><a href=""></a><span class="bu">print</span>(<span class="ss">f"O IMC de </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss"> é: </span><span class="sc">{</span>imc<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -259,7 +262,7 @@ Bruno Azuma Balzano
 </section>
 <section id="listas" class="slide level2">
 <h2>Listas</h2>
-<div id="bc305ecc" class="cell" data-execution_count="3">
+<div id="eaf6c469" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>distritos_sp <span class="op">=</span> [</span>
 <span id="cb4-2"><a href=""></a>    <span class="st">"Sé"</span>,</span>
 <span id="cb4-3"><a href=""></a>    <span class="st">"Itaquera"</span>,</span>
@@ -275,7 +278,7 @@ Bruno Azuma Balzano
 </section>
 <section id="listas---acessando-elementos" class="slide level2">
 <h2>Listas - Acessando elementos</h2>
-<div id="3db0ea99" class="cell" data-execution_count="4">
+<div id="6e91ed96" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="dv">0</span>])  <span class="co"># Primeiro elemento</span></span>
 <span id="cb6-2"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="op">-</span><span class="dv">1</span>])  <span class="co"># Último elemento</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -286,7 +289,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="listas---operações-básicas-adicionar" class="slide level2">
 <h2>Listas - Operações básicas: adicionar</h2>
-<div id="3e7100f7" class="cell" data-execution_count="5">
+<div id="fc64a818" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a>distritos_sp.append(<span class="st">"Butantã"</span>)  <span class="co"># Adiciona um novo elemento à lista</span></span>
 <span id="cb8-2"><a href=""></a><span class="bu">print</span>(distritos_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -296,7 +299,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="listas---operações-básicas-invertendo-a-ordem" class="slide level2">
 <h2>Listas - Operações básicas: invertendo a ordem</h2>
-<div id="ae18b7c0" class="cell" data-execution_count="6">
+<div id="de9e76a6" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a>distritos_sp.reverse() <span class="co"># Inverte a ordem dos elementos na lista</span></span>
 <span id="cb10-2"><a href=""></a><span class="bu">print</span>(distritos_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -306,7 +309,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="listas---operações-básicas-ordenando-os-elementos" class="slide level2">
 <h2>Listas - Operações básicas: ordenando os elementos</h2>
-<div id="1b7fab36" class="cell" data-execution_count="7">
+<div id="ede83944" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a>distritos_sp.sort() <span class="co"># Ordena os elementos da lista em ordem alfabética</span></span>
 <span id="cb12-2"><a href=""></a><span class="bu">print</span>(distritos_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -316,7 +319,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="laços---for" class="slide level2">
 <h2>Laços - for</h2>
-<div id="dea421a2" class="cell" data-execution_count="8">
+<div id="74392bb1" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href=""></a><span class="co"># Exemplo ruim</span></span>
 <span id="cb14-2"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="dv">0</span>])</span>
 <span id="cb14-3"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="dv">1</span>])</span>
@@ -348,7 +351,7 @@ IndexError: list index out of range</code></pre>
 </section>
 <section id="laços---for-2" class="slide level2">
 <h2>Laços - for</h2>
-<div id="67ba82b2" class="cell" data-execution_count="9">
+<div id="2346bd62" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href=""></a><span class="co"># Exemplo bom</span></span>
 <span id="cb18-2"><a href=""></a><span class="cf">for</span> distrito <span class="kw">in</span> distritos_sp:</span>
 <span id="cb18-3"><a href=""></a>    <span class="bu">print</span>(distrito)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -364,7 +367,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="declaração-condicional---if" class="slide level2">
 <h2>Declaração Condicional - if</h2>
-<div id="1d34575b" class="cell" data-execution_count="10">
+<div id="d284997d" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a><span class="co"># Exemplo de declaração condicional</span></span>
 <span id="cb20-2"><a href=""></a><span class="cf">if</span> idade <span class="op">&lt;</span> <span class="dv">18</span>:</span>
 <span id="cb20-3"><a href=""></a>    <span class="bu">print</span>(<span class="st">"Menor de idade"</span>)</span>
@@ -377,7 +380,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="declaração-condicional---if-1" class="slide level2">
 <h2>Declaração Condicional - if</h2>
-<div id="7943a3ea" class="cell" data-execution_count="11">
+<div id="44c53c45" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href=""></a><span class="co"># Exemplo de declaração condicional</span></span>
 <span id="cb22-2"><a href=""></a><span class="cf">if</span> idade <span class="op">&lt;</span> <span class="dv">18</span>:</span>
 <span id="cb22-3"><a href=""></a>    <span class="bu">print</span>(<span class="st">"Menor de idade"</span>)</span>
@@ -392,7 +395,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="declaração-condicional---if-2" class="slide level2">
 <h2>Declaração Condicional - if</h2>
-<div id="3bdd6af7" class="cell" data-execution_count="12">
+<div id="46dca2ac" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href=""></a><span class="bu">print</span>(distritos_sp)</span>
 <span id="cb24-2"><a href=""></a></span>
 <span id="cb24-3"><a href=""></a><span class="cf">for</span> distrito <span class="kw">in</span> distritos_sp:</span>
@@ -407,7 +410,7 @@ Itaquera é um distrito que possui a letra 'u'.</code></pre>
 </section>
 <section id="funções" class="slide level2">
 <h2>Funções</h2>
-<div id="23914fa8" class="cell" data-execution_count="13">
+<div id="c195df27" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href=""></a><span class="co"># Exemplo de função</span></span>
 <span id="cb26-2"><a href=""></a><span class="kw">def</span> calcular_imc(peso, altura):</span>
 <span id="cb26-3"><a href=""></a>    imc <span class="op">=</span> peso <span class="op">/</span> (altura <span class="op">*</span> altura)</span>
@@ -420,6 +423,1014 @@ Itaquera é um distrito que possui a letra 'u'.</code></pre>
 <span id="cb26-10"><a href=""></a><span class="bu">print</span>(<span class="ss">f"O IMC de </span><span class="sc">{</span>nome_maria<span class="sc">}</span><span class="ss"> é: </span><span class="sc">{</span>imc_maria<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>O IMC de Maria é: 22.04</code></pre>
+</div>
+</div>
+</section></section>
+<section>
+<section id="análise-de-dados-com-python" class="title-slide slide level1 center">
+<h1>Análise de dados com Python</h1>
+
+</section>
+<section id="tabelas" class="slide level2">
+<h2>Tabelas</h2>
+<p><a href="https://pt.wikipedia.org/wiki/Lista_dos_distritos_de_S%C3%A3o_Paulo_por_popula%C3%A7%C3%A3o" data-preview-link="true">Wikipedia</a></p>
+</section>
+<section id="abrindo-tabelas-com-python" class="slide level2">
+<h2>Abrindo tabelas com Python</h2>
+<div id="b851d8c7" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb28" data-code-line-numbers="|4|7|9|10|"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb28-2"><a href=""></a></span>
+<span id="cb28-3"><a href=""></a><span class="co"># Lendo a tabela diretamente da Wikipedia</span></span>
+<span id="cb28-4"><a href=""></a>url <span class="op">=</span> <span class="st">"https://pt.wikipedia.org/wiki/Lista_dos_distritos_de_S%C3%A3o_Paulo_por_popula%C3%A7%C3%A3o"</span></span>
+<span id="cb28-5"><a href=""></a></span>
+<span id="cb28-6"><a href=""></a><span class="co"># Configuração de headers para evitar bloqueio por parte do servidor</span></span>
+<span id="cb28-7"><a href=""></a>headers <span class="op">=</span> {<span class="st">"User-Agent"</span>: <span class="st">"Chrome/120.0.0.0"</span>}</span>
+<span id="cb28-8"><a href=""></a></span>
+<span id="cb28-9"><a href=""></a>tabela <span class="op">=</span> pd.read_html(url, header<span class="op">=</span><span class="dv">0</span>, storage_options<span class="op">=</span>headers)[<span class="dv">1</span>]</span>
+<span id="cb28-10"><a href=""></a>tabela.head(<span class="dv">2</span>)  <span class="co"># Exibe as primeiras linhas da tabela</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="14">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1º</td>
+<td>Grajaú</td>
+<td>384873</td>
+<td>382897</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2º</td>
+<td>Jardim Ângela</td>
+<td>311432</td>
+<td>311329</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="selecionando-linhas" class="slide level2">
+<h2>Selecionando linhas</h2>
+<div id="81127d8c" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href=""></a><span class="co"># Selecionando pelo índice</span></span>
+<span id="cb29-2"><a href=""></a>tabela.loc[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="15">
+<pre><code>Unnamed: 0                    2º
+Distrito           Jardim Ângela
+Pop. Total 2022           311432
+Pop. Urb. 2022            311329
+Name: 1, dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="selecionando-linhas-1" class="slide level2">
+<h2>Selecionando linhas</h2>
+<div id="99520647" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href=""></a><span class="co"># Selecionando pela posição</span></span>
+<span id="cb31-2"><a href=""></a>tabela.iloc[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="16">
+<pre><code>Unnamed: 0                    2º
+Distrito           Jardim Ângela
+Pop. Total 2022           311432
+Pop. Urb. 2022            311329
+Name: 1, dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="selecionando-linhas-2" class="slide level2">
+<h2>Selecionando linhas</h2>
+<div id="84f2c713" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href=""></a><span class="co"># Selecionando pela posição</span></span>
+<span id="cb33-2"><a href=""></a>tabela.iloc[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="17">
+<pre><code>Unnamed: 0              96º
+Distrito           Marsilac
+Pop. Total 2022       11451
+Pop. Urb. 2022         6652
+Name: 95, dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="selecionando-linhas-3" class="slide level2">
+<h2>Selecionando linhas</h2>
+<div id="c42d9cf4" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb35" data-code-line-numbers="4|"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href=""></a><span class="co"># Ordena a tabela pelo nome do distrito</span></span>
+<span id="cb35-2"><a href=""></a>tabela.sort_values(<span class="st">"Distrito"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb35-3"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="18">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">89</td>
+<td>90º</td>
+<td>Alto de Pinheiros</td>
+<td>37359</td>
+<td>37359</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">72</td>
+<td>73º</td>
+<td>Anhanguera</td>
+<td>75360</td>
+<td>75061</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">57</td>
+<td>58º</td>
+<td>Aricanduva</td>
+<td>89574</td>
+<td>89574</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">54</td>
+<td>55º</td>
+<td>Artur Alvim</td>
+<td>95575</td>
+<td>95575</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="selecionando-linhas-4" class="slide level2">
+<h2>Selecionando linhas</h2>
+<div id="8c69f46b" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href=""></a><span class="co"># Selecionando pelo índice</span></span>
+<span id="cb36-2"><a href=""></a>tabela.loc[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="19">
+<pre><code>Unnamed: 0                4º
+Distrito           Sapopemba
+Pop. Total 2022       266715
+Pop. Urb. 2022        266715
+Name: 3, dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="selecionando-linhas-5" class="slide level2">
+<h2>Selecionando linhas</h2>
+<div id="7a60b3c1" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href=""></a><span class="co"># Selecionando pela posição</span></span>
+<span id="cb38-2"><a href=""></a>tabela.iloc[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="20">
+<pre><code>Unnamed: 0                 55º
+Distrito           Artur Alvim
+Pop. Total 2022          95575
+Pop. Urb. 2022           95575
+Name: 54, dtype: object</code></pre>
+</div>
+</div>
+</section>
+<section id="selecionando-colunas" class="slide level2">
+<h2>Selecionando colunas</h2>
+<div id="01ba7489" class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb40" data-code-line-numbers="4|"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href=""></a><span class="co"># Selecionando a coluna de população total</span></span>
+<span id="cb40-2"><a href=""></a>tabela[<span class="st">"Pop. Total 2022"</span>].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="21">
+<pre><code>89    37359
+72    75360
+57    89574
+54    95575
+Name: Pop. Total 2022, dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="selecionando-colunas-1" class="slide level2">
+<h2>Selecionando colunas</h2>
+<div id="847803ae" class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href=""></a><span class="co"># Selecionando a coluna de população total e urbana</span></span>
+<span id="cb42-2"><a href=""></a>colunas <span class="op">=</span> [<span class="st">"Pop. Total 2022"</span>, <span class="st">"Pop. Urb. 2022"</span>]</span>
+<span id="cb42-3"><a href=""></a>tabela[colunas].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="22">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">89</td>
+<td>37359</td>
+<td>37359</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">72</td>
+<td>75360</td>
+<td>75061</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">57</td>
+<td>89574</td>
+<td>89574</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">54</td>
+<td>95575</td>
+<td>95575</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="calculando-estatísticas-básicas" class="slide level2">
+<h2>Calculando estatísticas básicas</h2>
+<div id="21fd5cbb" class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href=""></a><span class="co"># Calculando a média da população total</span></span>
+<span id="cb43-2"><a href=""></a>media_pop_total <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>].mean()</span>
+<span id="cb43-3"><a href=""></a><span class="bu">print</span>(<span class="ss">f"A média da população total dos distritos é: </span><span class="sc">{</span>media_pop_total<span class="sc">:.0f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>A média da população total dos distritos é: 119292</code></pre>
+</div>
+</div>
+</section>
+<section id="calculando-estatísticas-básicas-1" class="slide level2">
+<h2>Calculando estatísticas básicas</h2>
+<div id="ac6f81c8" class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href=""></a><span class="co"># Calculando a soma da população total e urbana</span></span>
+<span id="cb45-2"><a href=""></a>colunas <span class="op">=</span> [<span class="st">"Pop. Total 2022"</span>, <span class="st">"Pop. Urb. 2022"</span>]</span>
+<span id="cb45-3"><a href=""></a>tabela[colunas].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<pre><code>Pop. Total 2022    11451999
+Pop. Urb. 2022     11434786
+dtype: int64</code></pre>
+</div>
+</div>
+</section>
+<section id="filtrando-dados" class="slide level2">
+<h2>Filtrando dados</h2>
+<div id="c7d2edf0" class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href=""></a><span class="co"># Filtrando os distritos com população total maior que 100.000</span></span>
+<span id="cb47-2"><a href=""></a>filtro <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>] <span class="op">&gt;</span> <span class="dv">100000</span></span>
+<span id="cb47-3"><a href=""></a>tabela[filtro].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">7</td>
+<td>8º</td>
+<td>Brasilândia</td>
+<td>243273</td>
+<td>243261</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">24</td>
+<td>25º</td>
+<td>Cachoeirinha</td>
+<td>143366</td>
+<td>143366</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">40</td>
+<td>41º</td>
+<td>Campo Grande</td>
+<td>115925</td>
+<td>115925</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">8</td>
+<td>9º</td>
+<td>Campo Limpo</td>
+<td>236162</td>
+<td>236162</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="filtrando-dados-1" class="slide level2">
+<h2>Filtrando dados</h2>
+<div id="b42da52d" class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href=""></a><span class="co"># Filtrando os distritos com população total diferente da população urbana</span></span>
+<span id="cb48-2"><a href=""></a>filtro <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>] <span class="op">!=</span> tabela[<span class="st">"Pop. Urb. 2022"</span>]</span>
+<span id="cb48-3"><a href=""></a>tabela[filtro].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="26">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">72</td>
+<td>73º</td>
+<td>Anhanguera</td>
+<td>75360</td>
+<td>75061</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>8º</td>
+<td>Brasilândia</td>
+<td>243273</td>
+<td>243261</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">15</td>
+<td>16º</td>
+<td>Cidade Dutra</td>
+<td>182459</td>
+<td>182438</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">14</td>
+<td>15º</td>
+<td>Cidade Tiradentes</td>
+<td>194177</td>
+<td>194160</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="criando-novas-colunas" class="slide level2">
+<h2>Criando novas colunas</h2>
+<div id="9ba6b6ef" class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href=""></a><span class="co"># Criando uma nova coluna de População Rural</span></span>
+<span id="cb49-2"><a href=""></a>tabela[<span class="st">"Pop. Rural 2022"</span>] <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>] <span class="op">-</span> tabela[<span class="st">"Pop. Urb. 2022"</span>]</span>
+<span id="cb49-3"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Rural 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">89</td>
+<td>90º</td>
+<td>Alto de Pinheiros</td>
+<td>37359</td>
+<td>37359</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">72</td>
+<td>73º</td>
+<td>Anhanguera</td>
+<td>75360</td>
+<td>75061</td>
+<td>299</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">57</td>
+<td>58º</td>
+<td>Aricanduva</td>
+<td>89574</td>
+<td>89574</td>
+<td>0</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">54</td>
+<td>55º</td>
+<td>Artur Alvim</td>
+<td>95575</td>
+<td>95575</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="criando-novas-colunas-1" class="slide level2">
+<h2>Criando novas colunas</h2>
+<div id="5c5560f1" class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href=""></a>tabela.sort_values(<span class="st">"Pop. Rural 2022"</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="28">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Rural 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">21</td>
+<td>22º</td>
+<td>Parelheiros</td>
+<td>153687</td>
+<td>145558</td>
+<td>8129</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">95</td>
+<td>96º</td>
+<td>Marsilac</td>
+<td>11451</td>
+<td>6652</td>
+<td>4799</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1º</td>
+<td>Grajaú</td>
+<td>384873</td>
+<td>382897</td>
+<td>1976</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">10</td>
+<td>11º</td>
+<td>Jaraguá</td>
+<td>211617</td>
+<td>210970</td>
+<td>647</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="criando-novas-colunas-2" class="slide level2">
+<h2>Criando novas colunas</h2>
+<div id="4497b0e2" class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href=""></a><span class="co"># Criando uma nova coluna de percentual de população rural</span></span>
+<span id="cb51-2"><a href=""></a>tabela[<span class="st">"% Pop. Rural 2022"</span>] <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> tabela[<span class="st">"Pop. Rural 2022"</span>] <span class="op">/</span> tabela[<span class="st">"Pop. Total 2022"</span>]</span>
+<span id="cb51-3"><a href=""></a>tabela.sort_values(<span class="st">"% Pop. Rural 2022"</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="29">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Rural 2022</th>
+<th data-quarto-table-cell-role="th">% Pop. Rural 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">95</td>
+<td>96º</td>
+<td>Marsilac</td>
+<td>11451</td>
+<td>6652</td>
+<td>4799</td>
+<td>41.909004</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">21</td>
+<td>22º</td>
+<td>Parelheiros</td>
+<td>153687</td>
+<td>145558</td>
+<td>8129</td>
+<td>5.289322</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1º</td>
+<td>Grajaú</td>
+<td>384873</td>
+<td>382897</td>
+<td>1976</td>
+<td>0.513416</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">59</td>
+<td>60º</td>
+<td>Perus</td>
+<td>87716</td>
+<td>87280</td>
+<td>436</td>
+<td>0.497059</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="renomeando-colunas" class="slide level2">
+<h2>Renomeando colunas</h2>
+<div id="00ef7211" class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href=""></a>tabela.rename(columns<span class="op">=</span>{<span class="st">"Unnamed: 0"</span>: <span class="st">"Posto"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb52-2"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Posto</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Rural 2022</th>
+<th data-quarto-table-cell-role="th">% Pop. Rural 2022</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">89</td>
+<td>90º</td>
+<td>Alto de Pinheiros</td>
+<td>37359</td>
+<td>37359</td>
+<td>0</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">72</td>
+<td>73º</td>
+<td>Anhanguera</td>
+<td>75360</td>
+<td>75061</td>
+<td>299</td>
+<td>0.396762</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">57</td>
+<td>58º</td>
+<td>Aricanduva</td>
+<td>89574</td>
+<td>89574</td>
+<td>0</td>
+<td>0.000000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">54</td>
+<td>55º</td>
+<td>Artur Alvim</td>
+<td>95575</td>
+<td>95575</td>
+<td>0</td>
+<td>0.000000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="renomeando-colunas-1" class="slide level2">
+<h2>Renomeando colunas</h2>
+<div id="39efd3f2" class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href=""></a><span class="co"># Criando coluna para os 10 distritos mais populosos</span></span>
+<span id="cb53-2"><a href=""></a>tabela[<span class="st">"Posto_numerico"</span>] <span class="op">=</span> tabela[<span class="st">"Posto"</span>].<span class="bu">str</span>.rstrip(<span class="st">".º"</span>).astype(<span class="bu">int</span>)</span>
+<span id="cb53-3"><a href=""></a>tabela.sort_values(<span class="st">"Posto_numerico"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb53-4"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Posto</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Rural 2022</th>
+<th data-quarto-table-cell-role="th">% Pop. Rural 2022</th>
+<th data-quarto-table-cell-role="th">Posto_numerico</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1º</td>
+<td>Grajaú</td>
+<td>384873</td>
+<td>382897</td>
+<td>1976</td>
+<td>0.513416</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2º</td>
+<td>Jardim Ângela</td>
+<td>311432</td>
+<td>311329</td>
+<td>103</td>
+<td>0.033073</td>
+<td>2</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3º</td>
+<td>Capão Redondo</td>
+<td>270767</td>
+<td>270767</td>
+<td>0</td>
+<td>0.000000</td>
+<td>3</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4º</td>
+<td>Sapopemba</td>
+<td>266715</td>
+<td>266715</td>
+<td>0</td>
+<td>0.000000</td>
+<td>4</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="renomeando-colunas-2" class="slide level2">
+<h2>Renomeando colunas</h2>
+<div id="6e8ee1e2" class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href=""></a><span class="co"># Criando coluna para os 10 distritos mais populosos</span></span>
+<span id="cb54-2"><a href=""></a>tabela[<span class="st">"Dez mais populosos"</span>] <span class="op">=</span> tabela[<span class="st">"Posto_numerico"</span>] <span class="op">&lt;=</span> <span class="dv">10</span></span>
+<span id="cb54-3"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="32">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Posto</th>
+<th data-quarto-table-cell-role="th">Distrito</th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Urb. 2022</th>
+<th data-quarto-table-cell-role="th">Pop. Rural 2022</th>
+<th data-quarto-table-cell-role="th">% Pop. Rural 2022</th>
+<th data-quarto-table-cell-role="th">Posto_numerico</th>
+<th data-quarto-table-cell-role="th">Dez mais populosos</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1º</td>
+<td>Grajaú</td>
+<td>384873</td>
+<td>382897</td>
+<td>1976</td>
+<td>0.513416</td>
+<td>1</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2º</td>
+<td>Jardim Ângela</td>
+<td>311432</td>
+<td>311329</td>
+<td>103</td>
+<td>0.033073</td>
+<td>2</td>
+<td>True</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3º</td>
+<td>Capão Redondo</td>
+<td>270767</td>
+<td>270767</td>
+<td>0</td>
+<td>0.000000</td>
+<td>3</td>
+<td>True</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4º</td>
+<td>Sapopemba</td>
+<td>266715</td>
+<td>266715</td>
+<td>0</td>
+<td>0.000000</td>
+<td>4</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="agrupando-e-agregando-dados" class="slide level2">
+<h2>Agrupando e agregando dados</h2>
+<div id="84a39cf4" class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href=""></a><span class="co"># Agrupando por dez mais populosos e calculando a soma da população total</span></span>
+<span id="cb55-2"><a href=""></a>tabela.groupby(<span class="st">"Dez mais populosos"</span>)[[<span class="st">"Pop. Total 2022"</span>]].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="33">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Dez mais populosos</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">False</td>
+<td>8753764</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">True</td>
+<td>2698235</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="agrupando-e-agregando-dados-1" class="slide level2">
+<h2>Agrupando e agregando dados</h2>
+<div id="2f5aaa7a" class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href=""></a><span class="co"># Agrupando por dez mais populosos e calculando a soma da população total</span></span>
+<span id="cb56-2"><a href=""></a>pop_total <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>].<span class="bu">sum</span>()</span>
+<span id="cb56-3"><a href=""></a>tabela.groupby(<span class="st">"Dez mais populosos"</span>)[[<span class="st">"Pop. Total 2022"</span>]].<span class="bu">sum</span>()<span class="op">/</span>pop_total<span class="op">*</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="34">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Pop. Total 2022</th>
+</tr>
+<tr class="even">
+<th data-quarto-table-cell-role="th">Dez mais populosos</th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">False</td>
+<td>76.438742</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">True</td>
+<td>23.561258</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 
