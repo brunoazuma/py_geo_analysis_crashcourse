@@ -383,3 +383,68 @@ tabela.groupby("Dez mais populosos")[["Pop. Total 2022"]].sum()
 pop_total = tabela["Pop. Total 2022"].sum()
 tabela.groupby("Dez mais populosos")[["Pop. Total 2022"]].sum()/pop_total*100
 ```
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+# Carregando dados de escolas
+url_escolas = "https://dados.prefeitura.sp.gov.br/dataset/8da55b0e-b385-4b54-9296-d0000014ddd5/resource/a12ad63d-d944-4e35-9aac-71a5ae0b7bdf/download/escolas122022.csv"
+escolas = pd.read_csv(url_escolas, sep=";", encoding="latin1")
+escolas.head(4)
+```
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+escolas[['DISTRITO']].head(4)
+```
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+escolas_agrupadas = escolas.groupby("DISTRITO").size()
+escolas_agrupadas.head(4)
+```
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+escolas_distrito = escolas_agrupadas.reset_index(name="Número de Escolas")
+escolas_distrito.head(4)
+```
+
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+
+# Normalizando os nomes dos distritos para a junção
+tabela['DISTRITO'] = tabela['Distrito'].str.upper()
+tabela.head(4)
+```
+
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+from unidecode import unidecode
+
+# Normalizando os nomes dos distritos para a junção
+tabela['DISTRITO'] = tabela['DISTRITO'].apply(unidecode)
+tabela.head(4)
+```
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+# Juntando as tabelas de população e escolas pelo nome do distrito
+tabela_juntada = tabela.merge(escolas_distrito, on="DISTRITO", how="left")
+tabela_juntada.head(4)
+```
