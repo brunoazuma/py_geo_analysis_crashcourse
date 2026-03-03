@@ -8,8 +8,9 @@ Esta aula será dividida em três partes:
 
 ::: {.incremental}
 1. Conceitos básicos de Python
-2. Introdução aos dados geográficos com Python
-3. Manipulação de dados geográficos com Python
+2. Introdução à análise de dados com Python
+3. Introdução aos dados geográficos com Python
+4. Manipulação de dados geográficos com Python
 :::
 
 # Conceitos básicos de Python
@@ -447,4 +448,272 @@ tabela.head(4)
 # Juntando as tabelas de população e escolas pelo nome do distrito
 tabela_juntada = tabela.merge(escolas_distrito, on="DISTRITO", how="left")
 tabela_juntada.head(4)
+```
+
+# Dados geográficos com Python
+
+## Tipos de representação de dados geográficos
+
+![Representações vetoriais e raster de ruas e edifícios. Fonte: @pythongis.](images/vector_vs_raster.png){fig-align="center"}
+
+## Tipos de geometrias
+
+![Modelo de dados vetoriais seguindo a Simple Features Access Specification (ISO 19125-1). Fonte: @pythongis.](images/vector_data_model.png){fig-align="center"}
+
+## Formatos de arquivos de dados geográficos
+
+::: {.incremental}
+- **Shapefile**: Formato popular para dados vetoriais, suportado por muitos sistemas de informação geográfica (SIG). Possui uma estrutura de arquivos múltiplos (.shp, .shx, .dbf) que armazenam diferentes aspectos dos dados e algumas limitações associadas à época de desenvolvimento do formato.
+- **GeoJSON**: Formato aberto baseado em JSON para representar dados geográficos, amplamente utilizado em aplicações web. Porém, por ser baseado em texto, pode ser menos eficiente para grandes volumes de dados em comparação com formatos binários.
+- **GeoPackage (GPKG)**: Formato aberto de arquivo de banco de dados SQLite para dados geoespaciais, suportando tanto dados vetoriais quanto raster, além de suportar várias camadas em um único arquivo.
+- **GeoParquet**: Formato de arquivo baseado em Parquet para dados geoespaciais, projetado para ser eficiente em termos de armazenamento e desempenho, especialmente para grandes volumes de dados. Ele é otimizado para leitura e escrita rápida de todos os registros, tornando-o adequado para análise de dados geográficos em larga escala.
+- **KML**: Menos utilizado do que os outros formatos no mundo do python, é um formato XML usado para representar dados geográficos em aplicativos como Google Earth.
+:::
+
+## Sistemas de referência de coordenadas (CRS)
+
+Possui tipicamente três componentes principais:
+
+::: {.incremental}
+1. **Datum**: Referência geodésica que relaciona o sistema de coordenadas com a superfície da Terra. É o que define o tamanho e a forma da Terra, como uma esfera, um elipsóide ou um geoide. Além disso, o datum define a posição do sistema de coordenadas em relação à Terra.
+2. **Projeção**: Método utilizado para representar a superfície curva da Terra em um plano. Existem várias projeções, cada uma com suas próprias distorções e usos específicos.
+3. **Parâmetros adicionais**: Informações que podem ser usadas para ajustar a representação dos dados geográficos, como a escala e o meridiano central.
+:::
+
+**Observação**: existem sistemas de referência de coordenadas sem projeção, chamados de sistemas de coordenadas geográficas, que utilizam latitude e longitude para representar a localização na superfície da Terra.
+
+## Projeção de dados geográficos
+
+![Representações bidimensionais de dados geográficos sempre causam algum grau de distorção. Fonte: @pythongis.](images/curved_surface_to_flat_plane.png){fig-align="center"}
+
+Porém, diversas operações de análise de dados geográficos exigem que os dados estejam em um sistema de referência de coordenadas projetado e, em caso de múltiplas tabelas de dados geográficos, é necessário que todas estejam no mesmo sistema de referência de coordenadas.
+
+## Representação de dados geográficos em Python - Pontos
+
+```{python}
+#| echo: true
+from shapely.geometry import Point
+
+# Criando um ponto
+ponto = Point(10, 20)
+ponto
+```
+
+## Representação de dados geográficos em Python - Linhas
+
+```{python}
+#| echo: true
+from shapely.geometry import LineString
+
+# Criando uma linha
+linha = LineString([(0, 0), (1, 1), (1, 2)])
+linha
+```
+
+## Representação de dados geográficos em Python - Polígonos
+
+```{python}
+#| echo: true
+from shapely.geometry import Polygon
+
+# Criando um polígono
+poligono = Polygon([(0, 0), (2, 0), (2, 1), (4, 0), (3, 2), (1, 1), (0, 2)])
+poligono
+```
+
+## Representação de dados geográficos em Python - Geometrias complexas
+
+```{python}
+#| echo: true
+from shapely.geometry import MultiPoint
+
+lista_de_pontos = [Point(0, 0),
+                   Point(1, 2),
+                   Point(2, 1)]
+
+# Criando uma coleção de pontos
+pontos = MultiPoint(lista_de_pontos)
+pontos
+```
+
+## Tabelas de dados geográficos em Python - GeoDataFrames
+
+```{python}
+#| echo: true
+import geopandas as gpd
+
+# url_geojson = "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal:ponto_onibus&outputFormat=application/json"
+url_geojson = "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal:area_risco_geologico&outputFormat=application/json"
+
+# O GeoPandas consegue ler a URL WFS diretamente
+areas_risco = gpd.read_file(url_geojson)
+
+# Exibe as primeiras linhas da tabela com a geometria
+areas_risco.head()
+```
+
+##
+
+## Calculando estatísticas básicas com dados geográficos
+
+```{python}
+# | echo: true
+
+# Calculando o número de áreas de risco geológico
+num_areas_risco = areas_risco["geometry"].count()
+print(f"O número de áreas de risco geológico é: {num_areas_risco}")
+
+# Calculando a média de moradias em áreas de risco geológico
+media_moradias = areas_risco["qt_moradia"].mean()
+print(f"A média de moradias em áreas de risco geológico é: {media_moradias:.0f}")
+```
+
+## Agrupando e agregando dados geográficos
+
+```{python}
+#| echo: true
+# Agrupando por grau de risco e calculando a soma de moradias
+areas_risco.groupby("tx_grau_de_risco_geologico")[["qt_moradia"]].sum()
+```
+
+## Filtrando e agregando dados geográficos
+
+```{python}
+#| echo: true
+
+# Filtrando apenas as áreas de escorregamento
+filtro = areas_risco["tx_tipo_processo_geologico"] == "ESCORREGAMENTO"
+areas_escorregamento = areas_risco[filtro]
+
+areas_escorregamento.groupby("tx_grau_de_risco_geologico")[["qt_moradia"]].sum()
+```
+
+## Juntando tabelas de dados geográficos
+
+```{python}
+#| echo: true
+
+url_geojson = "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal:ponto_onibus&outputFormat=application/json"
+
+# O GeoPandas consegue ler a URL WFS diretamente
+pontos_onibus = gpd.read_file(url_geojson)
+
+# Exibe as primeiras linhas da tabela com a geometria
+pontos_onibus.head()
+```
+
+## Juntando tabelas de dados geográficos
+
+```{python}
+#| echo: true
+pontos_onibus.plot()
+```
+
+## Juntando tabelas de dados geográficos
+
+```{python}
+#| echo: true
+# Carregando dados de distritos
+url_distritos = "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal:distrito_municipal&outputFormat=application/json"
+distritos = gpd.read_file(url_distritos)
+distritos.head(4)
+```
+
+
+```{python}
+#| echo: true
+distritos.plot(edgecolor="cornflowerblue")
+```
+
+## Juntando tabelas de dados geográficos
+
+```{python}
+#| echo: true
+# Conferindo os sistemas de coordenadas
+print(f"Sistema de coordenadas dos pontos de ônibus: {pontos_onibus.crs}")
+print(f"Sistema de coordenadas dos distritos: {distritos.crs}")
+```
+[SIRGAS 2000 / UTM zone 23S - EPSG:31983](https://epsg.io/31983){preview-link="true"}
+
+## Juntando tabelas de dados geográficos
+
+```{python}
+#| echo: true
+# Selecionando apenas algumas colunas dos distritos para a junção
+colunas_selecionadas = ["nm_distrito_municipal", "geometry"]
+
+# Juntando os pontos de ônibus com os distritos
+pontos_onibus_distritos = pontos_onibus.sjoin(distritos[colunas_selecionadas], how="left", predicate="within")
+pontos_onibus_distritos.head(4)
+```
+
+## Juntando tabelas de dados geográficos
+
+```{python}
+#| echo: true
+# Contando o número de pontos de ônibus por distrito
+pontos_por_distrito = pontos_onibus_distritos\
+                      .groupby("nm_distrito_municipal")\
+                      .size()\
+                      .reset_index(name="Número de Pontos de Ônibus")
+pontos_por_distrito.head(4)
+```
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+# Juntando a tabela de pontos de ônibus por distrito com a tabela inicial
+
+pontos_por_distrito.rename(columns={"nm_distrito_municipal": "DISTRITO"},
+                           inplace=True)
+
+tabela_distritos = tabela.merge(pontos_por_distrito)
+tabela_distritos.head(4)
+```
+
+## Juntando tabelas
+
+```{python}
+#| echo: true
+# calculando o número de pontos de ônibus por 100.000 habitantes
+tabela_distritos["Pontos de Ônibus por 100.000 habitantes"] = 100000 * tabela_distritos["Número de Pontos de Ônibus"] / tabela_distritos["Pop. Total 2022"]
+tabela_distritos.head(4)
+```
+
+# BÔNUS: Visualização de dados geográficos com Python
+
+## Voltando os dados de pontos de ônibus para o formato geográfico
+
+```{python}
+#| echo: true
+
+distritos.rename(columns={"nm_distrito_municipal": "DISTRITO"},
+                 inplace=True)
+
+distritos_com_pontos = distritos.merge(tabela_distritos[["Pontos de Ônibus por 100.000 habitantes", "DISTRITO"]])
+
+distritos_com_pontos.head(4)
+```
+
+```{python}
+import matplotlib.pyplot as plt
+
+# Definindo o tamanho da figura
+plt.figure(figsize=(10, 10))
+
+# Plotando a tabela de distritos
+distritos_com_pontos.plot(column="Pontos de Ônibus por 100.000 habitantes",
+                          cmap="OrRd",
+                          legend=True,
+                          legend_kwds={"loc": "upper right",
+                                       "title": "Pontos de Ônibus por 100.000 habitantes",
+                                       "bbox_to_anchor": (2.5, 1)},
+                          scheme="quantiles")
+
+# Adicionando título
+plt.title("Número de Pontos de Ônibus por 100.000 habitantes por Distrito em São Paulo", fontsize=16)
+
+# Exibindo o gráfico
+plt.show()
 ```
