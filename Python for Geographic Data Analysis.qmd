@@ -1,10 +1,12 @@
 ---
 title: "Python para Análise de Dados Geográficos"
+nocite: |
+  @*
 ---
 
 ## Visão geral
 
-Esta aula será dividida em três partes:
+Esta aula será dividida em quatro partes:
 
 ::: {.incremental}
 1. Conceitos básicos de Python
@@ -726,3 +728,5 @@ plt.title("Número de Pontos de Ônibus por 100.000 habitantes por Distrito em S
 # Exibindo o gráfico
 plt.show()
 ```
+
+# Referências

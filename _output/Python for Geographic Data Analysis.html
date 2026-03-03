@@ -229,7 +229,7 @@ Bruno Azuma Balzano
 </section>
 <section id="visão-geral" class="slide level2">
 <h2>Visão geral</h2>
-<p>Esta aula será dividida em três partes:</p>
+<p>Esta aula será dividida em quatro partes:</p>
 <ol type="1">
 <li class="fragment">Conceitos básicos de Python</li>
 <li class="fragment">Introdução à análise de dados com Python</li>
@@ -262,7 +262,7 @@ Bruno Azuma Balzano
 </section>
 <section id="variáveis-e-tipos-de-dados" class="slide level2">
 <h2>Variáveis e tipos de dados</h2>
-<div id="27fcf5fd" class="cell" data-execution_count="1">
+<div id="4da04ed8" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href=""></a><span class="co"># Exemplo de variáveis e tipos de dados em Python</span></span>
 <span id="cb1-2"><a href=""></a>nome <span class="op">=</span> <span class="st">"João"</span>  <span class="co"># String</span></span>
 <span id="cb1-3"><a href=""></a>idade <span class="op">=</span> <span class="dv">30</span>  <span class="co"># Inteiro</span></span>
@@ -273,7 +273,7 @@ Bruno Azuma Balzano
 </section>
 <section id="variáveis-e-tipos-de-dados-1" class="slide level2">
 <h2>Variáveis e tipos de dados</h2>
-<div id="01f11f7b" class="cell" data-execution_count="2">
+<div id="bff4d9a1" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href=""></a>imc <span class="op">=</span> peso <span class="op">/</span> (altura <span class="op">*</span> altura)  <span class="co"># Cálculo do Índice de Massa Corporal</span></span>
 <span id="cb2-2"><a href=""></a><span class="bu">print</span>(<span class="ss">f"O IMC de </span><span class="sc">{</span>nome<span class="sc">}</span><span class="ss"> é: </span><span class="sc">{</span>imc<span class="sc">:.2f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -283,7 +283,7 @@ Bruno Azuma Balzano
 </section>
 <section id="listas" class="slide level2">
 <h2>Listas</h2>
-<div id="51346a7b" class="cell" data-execution_count="3">
+<div id="2383bd2b" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href=""></a>distritos_sp <span class="op">=</span> [</span>
 <span id="cb4-2"><a href=""></a>    <span class="st">"Sé"</span>,</span>
 <span id="cb4-3"><a href=""></a>    <span class="st">"Itaquera"</span>,</span>
@@ -299,7 +299,7 @@ Bruno Azuma Balzano
 </section>
 <section id="listas---acessando-elementos" class="slide level2">
 <h2>Listas - Acessando elementos</h2>
-<div id="bbc9fa97" class="cell" data-execution_count="4">
+<div id="ac0ea5d1" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="dv">0</span>])  <span class="co"># Primeiro elemento</span></span>
 <span id="cb6-2"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="op">-</span><span class="dv">1</span>])  <span class="co"># Último elemento</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -310,7 +310,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="listas---operações-básicas-adicionar" class="slide level2">
 <h2>Listas - Operações básicas: adicionar</h2>
-<div id="3a712531" class="cell" data-execution_count="5">
+<div id="a82ea66d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href=""></a>distritos_sp.append(<span class="st">"Butantã"</span>)  <span class="co"># Adiciona um novo elemento à lista</span></span>
 <span id="cb8-2"><a href=""></a><span class="bu">print</span>(distritos_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -320,7 +320,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="listas---operações-básicas-invertendo-a-ordem" class="slide level2">
 <h2>Listas - Operações básicas: invertendo a ordem</h2>
-<div id="61ff6f73" class="cell" data-execution_count="6">
+<div id="0fe2a450" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href=""></a>distritos_sp.reverse() <span class="co"># Inverte a ordem dos elementos na lista</span></span>
 <span id="cb10-2"><a href=""></a><span class="bu">print</span>(distritos_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -330,7 +330,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="listas---operações-básicas-ordenando-os-elementos" class="slide level2">
 <h2>Listas - Operações básicas: ordenando os elementos</h2>
-<div id="ce6d170f" class="cell" data-execution_count="7">
+<div id="fcf0a9a9" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href=""></a>distritos_sp.sort() <span class="co"># Ordena os elementos da lista em ordem alfabética</span></span>
 <span id="cb12-2"><a href=""></a><span class="bu">print</span>(distritos_sp)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -340,7 +340,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="laços---for" class="slide level2">
 <h2>Laços - for</h2>
-<div id="11f3ad6b" class="cell" data-execution_count="8">
+<div id="aa136e7f" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href=""></a><span class="co"># Exemplo ruim</span></span>
 <span id="cb14-2"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="dv">0</span>])</span>
 <span id="cb14-3"><a href=""></a><span class="bu">print</span>(distritos_sp[<span class="dv">1</span>])</span>
@@ -372,7 +372,7 @@ IndexError: list index out of range</code></pre>
 </section>
 <section id="laços---for-2" class="slide level2">
 <h2>Laços - for</h2>
-<div id="716384ef" class="cell" data-execution_count="9">
+<div id="99240a0e" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href=""></a><span class="co"># Exemplo bom</span></span>
 <span id="cb18-2"><a href=""></a><span class="cf">for</span> distrito <span class="kw">in</span> distritos_sp:</span>
 <span id="cb18-3"><a href=""></a>    <span class="bu">print</span>(distrito)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -388,7 +388,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="declaração-condicional---if" class="slide level2">
 <h2>Declaração Condicional - if</h2>
-<div id="07c2c641" class="cell" data-execution_count="10">
+<div id="135161bc" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href=""></a><span class="co"># Exemplo de declaração condicional</span></span>
 <span id="cb20-2"><a href=""></a><span class="cf">if</span> idade <span class="op">&lt;</span> <span class="dv">18</span>:</span>
 <span id="cb20-3"><a href=""></a>    <span class="bu">print</span>(<span class="st">"Menor de idade"</span>)</span>
@@ -401,7 +401,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="declaração-condicional---if-1" class="slide level2">
 <h2>Declaração Condicional - if</h2>
-<div id="38a0c5c9" class="cell" data-execution_count="11">
+<div id="db5b139c" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href=""></a><span class="co"># Exemplo de declaração condicional</span></span>
 <span id="cb22-2"><a href=""></a><span class="cf">if</span> idade <span class="op">&lt;</span> <span class="dv">18</span>:</span>
 <span id="cb22-3"><a href=""></a>    <span class="bu">print</span>(<span class="st">"Menor de idade"</span>)</span>
@@ -416,7 +416,7 @@ Vila Mariana</code></pre>
 </section>
 <section id="declaração-condicional---if-2" class="slide level2">
 <h2>Declaração Condicional - if</h2>
-<div id="07b63ba2" class="cell" data-execution_count="12">
+<div id="d7b3f1cd" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href=""></a><span class="bu">print</span>(distritos_sp)</span>
 <span id="cb24-2"><a href=""></a></span>
 <span id="cb24-3"><a href=""></a><span class="cf">for</span> distrito <span class="kw">in</span> distritos_sp:</span>
@@ -431,7 +431,7 @@ Itaquera é um distrito que possui a letra 'u'.</code></pre>
 </section>
 <section id="funções" class="slide level2">
 <h2>Funções</h2>
-<div id="07e3bdaa" class="cell" data-execution_count="13">
+<div id="a4566613" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href=""></a><span class="co"># Exemplo de função</span></span>
 <span id="cb26-2"><a href=""></a><span class="kw">def</span> calcular_imc(peso, altura):</span>
 <span id="cb26-3"><a href=""></a>    imc <span class="op">=</span> peso <span class="op">/</span> (altura <span class="op">*</span> altura)</span>
@@ -458,7 +458,7 @@ Itaquera é um distrito que possui a letra 'u'.</code></pre>
 </section>
 <section id="abrindo-tabelas-com-python" class="slide level2">
 <h2>Abrindo tabelas com Python</h2>
-<div id="958c118d" class="cell" data-execution_count="14">
+<div id="af0fac19" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb28" data-code-line-numbers="|4|7|9|10|"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href=""></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb28-2"><a href=""></a></span>
 <span id="cb28-3"><a href=""></a><span class="co"># Lendo a tabela diretamente da Wikipedia</span></span>
@@ -469,7 +469,7 @@ Itaquera é um distrito que possui a letra 'u'.</code></pre>
 <span id="cb28-8"><a href=""></a></span>
 <span id="cb28-9"><a href=""></a>tabela <span class="op">=</span> pd.read_html(url, header<span class="op">=</span><span class="dv">0</span>, storage_options<span class="op">=</span>headers)[<span class="dv">1</span>]</span>
 <span id="cb28-10"><a href=""></a>tabela.head(<span class="dv">2</span>)  <span class="co"># Exibe as primeiras linhas da tabela</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="74">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -519,10 +519,10 @@ Itaquera é um distrito que possui a letra 'u'.</code></pre>
 </section>
 <section id="selecionando-linhas" class="slide level2">
 <h2>Selecionando linhas</h2>
-<div id="7afa0071" class="cell" data-execution_count="15">
+<div id="3a9060a6" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href=""></a><span class="co"># Selecionando pelo índice</span></span>
 <span id="cb29-2"><a href=""></a>tabela.loc[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
+<div class="cell-output cell-output-display" data-execution_count="75">
 <pre><code>Unnamed: 0                    2º
 Distrito           Jardim Ângela
 Pop. Total 2022           311432
@@ -533,10 +533,10 @@ Name: 1, dtype: object</code></pre>
 </section>
 <section id="selecionando-linhas-1" class="slide level2">
 <h2>Selecionando linhas</h2>
-<div id="8f0c6918" class="cell" data-execution_count="16">
+<div id="d9ba4fc8" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href=""></a><span class="co"># Selecionando pela posição</span></span>
 <span id="cb31-2"><a href=""></a>tabela.iloc[<span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
+<div class="cell-output cell-output-display" data-execution_count="76">
 <pre><code>Unnamed: 0                    2º
 Distrito           Jardim Ângela
 Pop. Total 2022           311432
@@ -547,10 +547,10 @@ Name: 1, dtype: object</code></pre>
 </section>
 <section id="selecionando-linhas-2" class="slide level2">
 <h2>Selecionando linhas</h2>
-<div id="78ecec87" class="cell" data-execution_count="17">
+<div id="bc298cac" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb33-1"><a href=""></a><span class="co"># Selecionando pela posição</span></span>
 <span id="cb33-2"><a href=""></a>tabela.iloc[<span class="op">-</span><span class="dv">1</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="17">
+<div class="cell-output cell-output-display" data-execution_count="77">
 <pre><code>Unnamed: 0              96º
 Distrito           Marsilac
 Pop. Total 2022       11451
@@ -561,11 +561,11 @@ Name: 95, dtype: object</code></pre>
 </section>
 <section id="selecionando-linhas-3" class="slide level2">
 <h2>Selecionando linhas</h2>
-<div id="0bd28d43" class="cell" data-execution_count="18">
+<div id="68072c89" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb35" data-code-line-numbers="4|"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href=""></a><span class="co"># Ordena a tabela pelo nome do distrito</span></span>
 <span id="cb35-2"><a href=""></a>tabela.sort_values(<span class="st">"Distrito"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb35-3"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="18">
+<div class="cell-output cell-output-display" data-execution_count="78">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -629,10 +629,10 @@ Name: 95, dtype: object</code></pre>
 </section>
 <section id="selecionando-linhas-4" class="slide level2">
 <h2>Selecionando linhas</h2>
-<div id="39ddde58" class="cell" data-execution_count="19">
+<div id="f54051c3" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href=""></a><span class="co"># Selecionando pelo índice</span></span>
 <span id="cb36-2"><a href=""></a>tabela.loc[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="79">
 <pre><code>Unnamed: 0                4º
 Distrito           Sapopemba
 Pop. Total 2022       266715
@@ -643,10 +643,10 @@ Name: 3, dtype: object</code></pre>
 </section>
 <section id="selecionando-linhas-5" class="slide level2">
 <h2>Selecionando linhas</h2>
-<div id="63eca9ee" class="cell" data-execution_count="20">
+<div id="f3abf05a" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href=""></a><span class="co"># Selecionando pela posição</span></span>
 <span id="cb38-2"><a href=""></a>tabela.iloc[<span class="dv">3</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
+<div class="cell-output cell-output-display" data-execution_count="80">
 <pre><code>Unnamed: 0                 55º
 Distrito           Artur Alvim
 Pop. Total 2022          95575
@@ -657,10 +657,10 @@ Name: 54, dtype: object</code></pre>
 </section>
 <section id="selecionando-colunas" class="slide level2">
 <h2>Selecionando colunas</h2>
-<div id="0042551f" class="cell" data-execution_count="21">
+<div id="0aca8555" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb40" data-code-line-numbers="4|"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href=""></a><span class="co"># Selecionando a coluna de população total</span></span>
 <span id="cb40-2"><a href=""></a>tabela[<span class="st">"Pop. Total 2022"</span>].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div class="cell-output cell-output-display" data-execution_count="81">
 <pre><code>89    37359
 72    75360
 57    89574
@@ -671,11 +671,11 @@ Name: Pop. Total 2022, dtype: int64</code></pre>
 </section>
 <section id="selecionando-colunas-1" class="slide level2">
 <h2>Selecionando colunas</h2>
-<div id="8efae71c" class="cell" data-execution_count="22">
+<div id="8dc6d8f3" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href=""></a><span class="co"># Selecionando a coluna de população total e urbana</span></span>
 <span id="cb42-2"><a href=""></a>colunas <span class="op">=</span> [<span class="st">"Pop. Total 2022"</span>, <span class="st">"Pop. Urb. 2022"</span>]</span>
 <span id="cb42-3"><a href=""></a>tabela[colunas].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="22">
+<div class="cell-output cell-output-display" data-execution_count="82">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -729,7 +729,7 @@ Name: Pop. Total 2022, dtype: int64</code></pre>
 </section>
 <section id="calculando-estatísticas-básicas" class="slide level2">
 <h2>Calculando estatísticas básicas</h2>
-<div id="09e99463" class="cell" data-execution_count="23">
+<div id="67c0470d" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb43-1"><a href=""></a><span class="co"># Calculando a média da população total</span></span>
 <span id="cb43-2"><a href=""></a>media_pop_total <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>].mean()</span>
 <span id="cb43-3"><a href=""></a><span class="bu">print</span>(<span class="ss">f"A média da população total dos distritos é: </span><span class="sc">{</span>media_pop_total<span class="sc">:.0f}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -740,11 +740,11 @@ Name: Pop. Total 2022, dtype: int64</code></pre>
 </section>
 <section id="calculando-estatísticas-básicas-1" class="slide level2">
 <h2>Calculando estatísticas básicas</h2>
-<div id="4d243b41" class="cell" data-execution_count="24">
+<div id="617ddef5" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb45-1"><a href=""></a><span class="co"># Calculando a soma da população total e urbana</span></span>
 <span id="cb45-2"><a href=""></a>colunas <span class="op">=</span> [<span class="st">"Pop. Total 2022"</span>, <span class="st">"Pop. Urb. 2022"</span>]</span>
 <span id="cb45-3"><a href=""></a>tabela[colunas].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="24">
+<div class="cell-output cell-output-display" data-execution_count="84">
 <pre><code>Pop. Total 2022    11451999
 Pop. Urb. 2022     11434786
 dtype: int64</code></pre>
@@ -753,11 +753,11 @@ dtype: int64</code></pre>
 </section>
 <section id="filtrando-dados" class="slide level2">
 <h2>Filtrando dados</h2>
-<div id="3a6cc4a2" class="cell" data-execution_count="25">
+<div id="ee102327" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb47-1"><a href=""></a><span class="co"># Filtrando os distritos com população total maior que 100.000</span></span>
 <span id="cb47-2"><a href=""></a>filtro <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>] <span class="op">&gt;</span> <span class="dv">100000</span></span>
 <span id="cb47-3"><a href=""></a>tabela[filtro].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="25">
+<div class="cell-output cell-output-display" data-execution_count="85">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -821,11 +821,11 @@ dtype: int64</code></pre>
 </section>
 <section id="filtrando-dados-1" class="slide level2">
 <h2>Filtrando dados</h2>
-<div id="e5fec64d" class="cell" data-execution_count="26">
+<div id="f22f2cfd" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb48-1"><a href=""></a><span class="co"># Filtrando os distritos com população total diferente da população urbana</span></span>
 <span id="cb48-2"><a href=""></a>filtro <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>] <span class="op">!=</span> tabela[<span class="st">"Pop. Urb. 2022"</span>]</span>
 <span id="cb48-3"><a href=""></a>tabela[filtro].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="26">
+<div class="cell-output cell-output-display" data-execution_count="86">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -889,11 +889,11 @@ dtype: int64</code></pre>
 </section>
 <section id="criando-novas-colunas" class="slide level2">
 <h2>Criando novas colunas</h2>
-<div id="6df11098" class="cell" data-execution_count="27">
+<div id="be3c3cd6" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb49-1"><a href=""></a><span class="co"># Criando uma nova coluna de População Rural</span></span>
 <span id="cb49-2"><a href=""></a>tabela[<span class="st">"Pop. Rural 2022"</span>] <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>] <span class="op">-</span> tabela[<span class="st">"Pop. Urb. 2022"</span>]</span>
 <span id="cb49-3"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="27">
+<div class="cell-output cell-output-display" data-execution_count="87">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -962,9 +962,9 @@ dtype: int64</code></pre>
 </section>
 <section id="criando-novas-colunas-1" class="slide level2">
 <h2>Criando novas colunas</h2>
-<div id="5539a62c" class="cell" data-execution_count="28">
+<div id="252333ce" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb50-1"><a href=""></a>tabela.sort_values(<span class="st">"Pop. Rural 2022"</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="28">
+<div class="cell-output cell-output-display" data-execution_count="88">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1033,11 +1033,11 @@ dtype: int64</code></pre>
 </section>
 <section id="criando-novas-colunas-2" class="slide level2">
 <h2>Criando novas colunas</h2>
-<div id="3bf3e499" class="cell" data-execution_count="29">
+<div id="896889fb" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb51-1"><a href=""></a><span class="co"># Criando uma nova coluna de percentual de população rural</span></span>
 <span id="cb51-2"><a href=""></a>tabela[<span class="st">"% Pop. Rural 2022"</span>] <span class="op">=</span> <span class="dv">100</span> <span class="op">*</span> tabela[<span class="st">"Pop. Rural 2022"</span>] <span class="op">/</span> tabela[<span class="st">"Pop. Total 2022"</span>]</span>
 <span id="cb51-3"><a href=""></a>tabela.sort_values(<span class="st">"% Pop. Rural 2022"</span>, ascending<span class="op">=</span><span class="va">False</span>).head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="29">
+<div class="cell-output cell-output-display" data-execution_count="89">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1111,10 +1111,10 @@ dtype: int64</code></pre>
 </section>
 <section id="renomeando-colunas" class="slide level2">
 <h2>Renomeando colunas</h2>
-<div id="c1e684b4" class="cell" data-execution_count="30">
+<div id="1d07be55" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb52-1"><a href=""></a>tabela.rename(columns<span class="op">=</span>{<span class="st">"Unnamed: 0"</span>: <span class="st">"Posto"</span>}, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb52-2"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="30">
+<div class="cell-output cell-output-display" data-execution_count="90">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1188,12 +1188,12 @@ dtype: int64</code></pre>
 </section>
 <section id="renomeando-colunas-1" class="slide level2">
 <h2>Renomeando colunas</h2>
-<div id="800cfabb" class="cell" data-execution_count="31">
+<div id="cc6f8ba1" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb53-1"><a href=""></a><span class="co"># Criando coluna para os 10 distritos mais populosos</span></span>
 <span id="cb53-2"><a href=""></a>tabela[<span class="st">"Posto_numerico"</span>] <span class="op">=</span> tabela[<span class="st">"Posto"</span>].<span class="bu">str</span>.rstrip(<span class="st">".º"</span>).astype(<span class="bu">int</span>)</span>
 <span id="cb53-3"><a href=""></a>tabela.sort_values(<span class="st">"Posto_numerico"</span>, inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb53-4"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="31">
+<div class="cell-output cell-output-display" data-execution_count="91">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1272,11 +1272,11 @@ dtype: int64</code></pre>
 </section>
 <section id="renomeando-colunas-2" class="slide level2">
 <h2>Renomeando colunas</h2>
-<div id="ff905d42" class="cell" data-execution_count="32">
+<div id="5391285e" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb54-1"><a href=""></a><span class="co"># Criando coluna para os 10 distritos mais populosos</span></span>
 <span id="cb54-2"><a href=""></a>tabela[<span class="st">"Dez mais populosos"</span>] <span class="op">=</span> tabela[<span class="st">"Posto_numerico"</span>] <span class="op">&lt;=</span> <span class="dv">10</span></span>
 <span id="cb54-3"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="32">
+<div class="cell-output cell-output-display" data-execution_count="92">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1360,10 +1360,10 @@ dtype: int64</code></pre>
 </section>
 <section id="agrupando-e-agregando-dados" class="slide level2">
 <h2>Agrupando e agregando dados</h2>
-<div id="c5d1deb2" class="cell" data-execution_count="33">
+<div id="fac3eae4" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb55-1"><a href=""></a><span class="co"># Agrupando por dez mais populosos e calculando a soma da população total</span></span>
 <span id="cb55-2"><a href=""></a>tabela.groupby(<span class="st">"Dez mais populosos"</span>)[[<span class="st">"Pop. Total 2022"</span>]].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="33">
+<div class="cell-output cell-output-display" data-execution_count="93">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1408,11 +1408,11 @@ dtype: int64</code></pre>
 </section>
 <section id="agrupando-e-agregando-dados-1" class="slide level2">
 <h2>Agrupando e agregando dados</h2>
-<div id="c263c609" class="cell" data-execution_count="34">
+<div id="a5f4d37c" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb56-1"><a href=""></a><span class="co"># Agrupando por dez mais populosos e calculando a soma da população total</span></span>
 <span id="cb56-2"><a href=""></a>pop_total <span class="op">=</span> tabela[<span class="st">"Pop. Total 2022"</span>].<span class="bu">sum</span>()</span>
 <span id="cb56-3"><a href=""></a>tabela.groupby(<span class="st">"Dez mais populosos"</span>)[[<span class="st">"Pop. Total 2022"</span>]].<span class="bu">sum</span>()<span class="op">/</span>pop_total<span class="op">*</span><span class="dv">100</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="34">
+<div class="cell-output cell-output-display" data-execution_count="94">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1457,12 +1457,12 @@ dtype: int64</code></pre>
 </section>
 <section id="juntando-tabelas" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="dc3840ad" class="cell" data-execution_count="35">
+<div id="be4f2e7a" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb57-1"><a href=""></a><span class="co"># Carregando dados de escolas</span></span>
 <span id="cb57-2"><a href=""></a>url_escolas <span class="op">=</span> <span class="st">"https://dados.prefeitura.sp.gov.br/dataset/8da55b0e-b385-4b54-9296-d0000014ddd5/resource/a12ad63d-d944-4e35-9aac-71a5ae0b7bdf/download/escolas122022.csv"</span></span>
 <span id="cb57-3"><a href=""></a>escolas <span class="op">=</span> pd.read_csv(url_escolas, sep<span class="op">=</span><span class="st">";"</span>, encoding<span class="op">=</span><span class="st">"latin1"</span>)</span>
 <span id="cb57-4"><a href=""></a>escolas.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="35">
+<div class="cell-output cell-output-display" data-execution_count="95">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1612,9 +1612,9 @@ dtype: int64</code></pre>
 </section>
 <section id="juntando-tabelas-1" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="4bf0ec9c" class="cell" data-execution_count="36">
+<div id="87873bb1" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb58-1"><a href=""></a>escolas[[<span class="st">'DISTRITO'</span>]].head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="36">
+<div class="cell-output cell-output-display" data-execution_count="96">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1663,10 +1663,10 @@ dtype: int64</code></pre>
 </section>
 <section id="juntando-tabelas-2" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="d139de13" class="cell" data-execution_count="37">
+<div id="77cdee1a" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb59-1"><a href=""></a>escolas_agrupadas <span class="op">=</span> escolas.groupby(<span class="st">"DISTRITO"</span>).size()</span>
 <span id="cb59-2"><a href=""></a>escolas_agrupadas.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="37">
+<div class="cell-output cell-output-display" data-execution_count="97">
 <pre><code>DISTRITO
 AGUA RASA            34
 ALTO DE PINHEIROS    13
@@ -1678,10 +1678,10 @@ dtype: int64</code></pre>
 </section>
 <section id="juntando-tabelas-3" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="f0fc561e" class="cell" data-execution_count="38">
+<div id="c23c477c" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb61-1"><a href=""></a>escolas_distrito <span class="op">=</span> escolas_agrupadas.reset_index(name<span class="op">=</span><span class="st">"Número de Escolas"</span>)</span>
 <span id="cb61-2"><a href=""></a>escolas_distrito.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="38">
+<div class="cell-output cell-output-display" data-execution_count="98">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1735,11 +1735,11 @@ dtype: int64</code></pre>
 </section>
 <section id="juntando-tabelas-4" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="66971b43" class="cell" data-execution_count="39">
+<div id="5f54b81c" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb62-1"><a href=""></a><span class="co"># Normalizando os nomes dos distritos para a junção</span></span>
 <span id="cb62-2"><a href=""></a>tabela[<span class="st">'DISTRITO'</span>] <span class="op">=</span> tabela[<span class="st">'Distrito'</span>].<span class="bu">str</span>.upper()</span>
 <span id="cb62-3"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="39">
+<div class="cell-output cell-output-display" data-execution_count="99">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1828,13 +1828,13 @@ dtype: int64</code></pre>
 </section>
 <section id="juntando-tabelas-5" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="a7589ab4" class="cell" data-execution_count="40">
+<div id="344981fd" class="cell" data-execution_count="40">
 <div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb63-1"><a href=""></a><span class="im">from</span> unidecode <span class="im">import</span> unidecode</span>
 <span id="cb63-2"><a href=""></a></span>
 <span id="cb63-3"><a href=""></a><span class="co"># Normalizando os nomes dos distritos para a junção</span></span>
 <span id="cb63-4"><a href=""></a>tabela[<span class="st">'DISTRITO'</span>] <span class="op">=</span> tabela[<span class="st">'DISTRITO'</span>].<span class="bu">apply</span>(unidecode)</span>
 <span id="cb63-5"><a href=""></a>tabela.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="40">
+<div class="cell-output cell-output-display" data-execution_count="100">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -1923,11 +1923,11 @@ dtype: int64</code></pre>
 </section>
 <section id="juntando-tabelas-6" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="b5c530ed" class="cell" data-execution_count="41">
+<div id="bde30209" class="cell" data-execution_count="41">
 <div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb64-1"><a href=""></a><span class="co"># Juntando as tabelas de população e escolas pelo nome do distrito</span></span>
 <span id="cb64-2"><a href=""></a>tabela_juntada <span class="op">=</span> tabela.merge(escolas_distrito, on<span class="op">=</span><span class="st">"DISTRITO"</span>, how<span class="op">=</span><span class="st">"left"</span>)</span>
 <span id="cb64-3"><a href=""></a>tabela_juntada.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="41">
+<div class="cell-output cell-output-display" data-execution_count="101">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2027,11 +2027,11 @@ dtype: int64</code></pre>
 <section id="tipos-de-representação-de-dados-geográficos" class="slide level2">
 <h2>Tipos de representação de dados geográficos</h2>
 
-<img data-src="images/vector_vs_raster.png" class="r-stretch quarto-figure-center"><p class="caption">Representações vetoriais e raster de ruas e edifícios. Fonte: <span class="citation" data-cites="pythongis">Tenkanen, Heikinheimo, and Whipp (<a href="#/visualizando-os-dados" role="doc-biblioref" onclick="">2025</a>)</span>.</p></section>
+<img data-src="images/vector_vs_raster.png" class="r-stretch quarto-figure-center"><p class="caption">Representações vetoriais e raster de ruas e edifícios. Fonte: <span class="citation" data-cites="pythongis">Tenkanen, Heikinheimo, and Whipp (<a href="#/referências" role="doc-biblioref" onclick="">2025</a>)</span>.</p></section>
 <section id="tipos-de-geometrias" class="slide level2">
 <h2>Tipos de geometrias</h2>
 
-<img data-src="images/vector_data_model.png" class="r-stretch quarto-figure-center"><p class="caption">Modelo de dados vetoriais seguindo a Simple Features Access Specification (ISO 19125-1). Fonte: <span class="citation" data-cites="pythongis">Tenkanen, Heikinheimo, and Whipp (<a href="#/visualizando-os-dados" role="doc-biblioref" onclick="">2025</a>)</span>.</p></section>
+<img data-src="images/vector_data_model.png" class="r-stretch quarto-figure-center"><p class="caption">Modelo de dados vetoriais seguindo a Simple Features Access Specification (ISO 19125-1). Fonte: <span class="citation" data-cites="pythongis">Tenkanen, Heikinheimo, and Whipp (<a href="#/referências" role="doc-biblioref" onclick="">2025</a>)</span>.</p></section>
 <section id="formatos-de-arquivos-de-dados-geográficos" class="slide level2">
 <h2>Formatos de arquivos de dados geográficos</h2>
 <ul>
@@ -2055,11 +2055,11 @@ dtype: int64</code></pre>
 <section id="projeção-de-dados-geográficos" class="slide level2">
 <h2>Projeção de dados geográficos</h2>
 
-<img data-src="images/curved_surface_to_flat_plane.png" class="r-stretch quarto-figure-center"><p class="caption">Representações bidimensionais de dados geográficos sempre causam algum grau de distorção. Fonte: <span class="citation" data-cites="pythongis">Tenkanen, Heikinheimo, and Whipp (<a href="#/visualizando-os-dados" role="doc-biblioref" onclick="">2025</a>)</span>.</p><p>Porém, diversas operações de análise de dados geográficos exigem que os dados estejam em um sistema de referência de coordenadas projetado e, em caso de múltiplas tabelas de dados geográficos, é necessário que todas estejam no mesmo sistema de referência de coordenadas.</p>
+<img data-src="images/curved_surface_to_flat_plane.png" class="r-stretch quarto-figure-center"><p class="caption">Representações bidimensionais de dados geográficos sempre causam algum grau de distorção. Fonte: <span class="citation" data-cites="pythongis">Tenkanen, Heikinheimo, and Whipp (<a href="#/referências" role="doc-biblioref" onclick="">2025</a>)</span>.</p><p>Porém, diversas operações de análise de dados geográficos exigem que os dados estejam em um sistema de referência de coordenadas projetado e, em caso de múltiplas tabelas de dados geográficos, é necessário que todas estejam no mesmo sistema de referência de coordenadas.</p>
 </section>
 <section id="representação-de-dados-geográficos-em-python---pontos" class="slide level2">
 <h2>Representação de dados geográficos em Python - Pontos</h2>
-<div id="79138d77" class="cell" data-execution_count="42">
+<div id="795c57b1" class="cell" data-execution_count="42">
 <div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb65-1"><a href=""></a><span class="im">from</span> shapely.geometry <span class="im">import</span> Point</span>
 <span id="cb65-2"><a href=""></a></span>
 <span id="cb65-3"><a href=""></a><span class="co"># Criando um ponto</span></span>
@@ -2070,7 +2070,7 @@ dtype: int64</code></pre>
 <img data-src="Python%20for%20Geographic%20Data%20Analysis_files/figure-revealjs/cell-43-output-1.svg" class="r-stretch"></section>
 <section id="representação-de-dados-geográficos-em-python---linhas" class="slide level2">
 <h2>Representação de dados geográficos em Python - Linhas</h2>
-<div id="94219c8c" class="cell" data-execution_count="43">
+<div id="cc897742" class="cell" data-execution_count="43">
 <div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb66-1"><a href=""></a><span class="im">from</span> shapely.geometry <span class="im">import</span> LineString</span>
 <span id="cb66-2"><a href=""></a></span>
 <span id="cb66-3"><a href=""></a><span class="co"># Criando uma linha</span></span>
@@ -2081,7 +2081,7 @@ dtype: int64</code></pre>
 <img data-src="Python%20for%20Geographic%20Data%20Analysis_files/figure-revealjs/cell-44-output-1.svg" class="r-stretch"></section>
 <section id="representação-de-dados-geográficos-em-python---polígonos" class="slide level2">
 <h2>Representação de dados geográficos em Python - Polígonos</h2>
-<div id="bc5b46b5" class="cell" data-execution_count="44">
+<div id="bf28d5a9" class="cell" data-execution_count="44">
 <div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb67-1"><a href=""></a><span class="im">from</span> shapely.geometry <span class="im">import</span> Polygon</span>
 <span id="cb67-2"><a href=""></a></span>
 <span id="cb67-3"><a href=""></a><span class="co"># Criando um polígono</span></span>
@@ -2092,7 +2092,7 @@ dtype: int64</code></pre>
 <img data-src="Python%20for%20Geographic%20Data%20Analysis_files/figure-revealjs/cell-45-output-1.svg" class="r-stretch"></section>
 <section id="representação-de-dados-geográficos-em-python---geometrias-complexas" class="slide level2">
 <h2>Representação de dados geográficos em Python - Geometrias complexas</h2>
-<div id="1bbe5884" class="cell" data-execution_count="45">
+<div id="c033733c" class="cell" data-execution_count="45">
 <div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb68-1"><a href=""></a><span class="im">from</span> shapely.geometry <span class="im">import</span> MultiPoint</span>
 <span id="cb68-2"><a href=""></a></span>
 <span id="cb68-3"><a href=""></a>lista_de_pontos <span class="op">=</span> [Point(<span class="dv">0</span>, <span class="dv">0</span>),</span>
@@ -2107,7 +2107,7 @@ dtype: int64</code></pre>
 <img data-src="Python%20for%20Geographic%20Data%20Analysis_files/figure-revealjs/cell-46-output-1.svg" class="r-stretch"></section>
 <section id="tabelas-de-dados-geográficos-em-python---geodataframes" class="slide level2">
 <h2>Tabelas de dados geográficos em Python - GeoDataFrames</h2>
-<div id="eb2e3bac" class="cell" data-execution_count="46">
+<div id="4bd98c8e" class="cell" data-execution_count="46">
 <div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb69-1"><a href=""></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb69-2"><a href=""></a></span>
 <span id="cb69-3"><a href=""></a><span class="co"># url_geojson = "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeNames=geoportal:ponto_onibus&amp;outputFormat=application/json"</span></span>
@@ -2118,7 +2118,7 @@ dtype: int64</code></pre>
 <span id="cb69-8"><a href=""></a></span>
 <span id="cb69-9"><a href=""></a><span class="co"># Exibe as primeiras linhas da tabela com a geometria</span></span>
 <span id="cb69-10"><a href=""></a>areas_risco.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="46">
+<div class="cell-output cell-output-display" data-execution_count="106">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2252,7 +2252,7 @@ dtype: int64</code></pre>
 </section>
 <section id="calculando-estatísticas-básicas-com-dados-geográficos" class="slide level2">
 <h2>Calculando estatísticas básicas com dados geográficos</h2>
-<div id="1bef3b37" class="cell" data-execution_count="47">
+<div id="7138722d" class="cell" data-execution_count="47">
 <div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb70-1"><a href=""></a><span class="co"># Calculando o número de áreas de risco geológico</span></span>
 <span id="cb70-2"><a href=""></a>num_areas_risco <span class="op">=</span> areas_risco[<span class="st">"geometry"</span>].count()</span>
 <span id="cb70-3"><a href=""></a><span class="bu">print</span>(<span class="ss">f"O número de áreas de risco geológico é: </span><span class="sc">{</span>num_areas_risco<span class="sc">}</span><span class="ss">"</span>)</span>
@@ -2268,10 +2268,10 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </section>
 <section id="agrupando-e-agregando-dados-geográficos" class="slide level2">
 <h2>Agrupando e agregando dados geográficos</h2>
-<div id="7cdc609c" class="cell" data-execution_count="48">
+<div id="a3551bda" class="cell" data-execution_count="48">
 <div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb72-1"><a href=""></a><span class="co"># Agrupando por grau de risco e calculando a soma de moradias</span></span>
 <span id="cb72-2"><a href=""></a>areas_risco.groupby(<span class="st">"tx_grau_de_risco_geologico"</span>)[[<span class="st">"qt_moradia"</span>]].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="48">
+<div class="cell-output cell-output-display" data-execution_count="108">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2328,13 +2328,13 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </section>
 <section id="filtrando-e-agregando-dados-geográficos" class="slide level2">
 <h2>Filtrando e agregando dados geográficos</h2>
-<div id="6c6c7b94" class="cell" data-execution_count="49">
+<div id="64ad3d72" class="cell" data-execution_count="49">
 <div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb73-1"><a href=""></a><span class="co"># Filtrando apenas as áreas de escorregamento</span></span>
 <span id="cb73-2"><a href=""></a>filtro <span class="op">=</span> areas_risco[<span class="st">"tx_tipo_processo_geologico"</span>] <span class="op">==</span> <span class="st">"ESCORREGAMENTO"</span></span>
 <span id="cb73-3"><a href=""></a>areas_escorregamento <span class="op">=</span> areas_risco[filtro]</span>
 <span id="cb73-4"><a href=""></a></span>
 <span id="cb73-5"><a href=""></a>areas_escorregamento.groupby(<span class="st">"tx_grau_de_risco_geologico"</span>)[[<span class="st">"qt_moradia"</span>]].<span class="bu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="49">
+<div class="cell-output cell-output-display" data-execution_count="109">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2391,7 +2391,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </section>
 <section id="juntando-tabelas-de-dados-geográficos" class="slide level2">
 <h2>Juntando tabelas de dados geográficos</h2>
-<div id="d5bce555" class="cell" data-execution_count="50">
+<div id="50fdd2da" class="cell" data-execution_count="50">
 <div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb74-1"><a href=""></a>url_geojson <span class="op">=</span> <span class="st">"https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeNames=geoportal:ponto_onibus&amp;outputFormat=application/json"</span></span>
 <span id="cb74-2"><a href=""></a></span>
 <span id="cb74-3"><a href=""></a><span class="co"># O GeoPandas consegue ler a URL WFS diretamente</span></span>
@@ -2399,7 +2399,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 <span id="cb74-5"><a href=""></a></span>
 <span id="cb74-6"><a href=""></a><span class="co"># Exibe as primeiras linhas da tabela com a geometria</span></span>
 <span id="cb74-7"><a href=""></a>pontos_onibus.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="50">
+<div class="cell-output cell-output-display" data-execution_count="110">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2431,7 +2431,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5831</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b07</td>
 <td>770007703</td>
 <td>22</td>
 <td>AV. BSA. DE MURITIBA , 478</td>
@@ -2441,7 +2441,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5832</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b08</td>
 <td>510001729</td>
 <td>22</td>
 <td>PÇA. RUFUS KING LANE , 40</td>
@@ -2451,7 +2451,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5833</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b09</td>
 <td>600005106</td>
 <td>22</td>
 <td>R. WADIH HATTI , 364</td>
@@ -2461,7 +2461,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5834</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b0a</td>
 <td>5808146</td>
 <td>22</td>
 <td>R. SUÍTE DE NATAL , 1294</td>
@@ -2471,7 +2471,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5835</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b0b</td>
 <td>890004800</td>
 <td>22</td>
 <td>ESTR. DO IMPERADOR , 5451</td>
@@ -2488,7 +2488,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </section>
 <section id="juntando-tabelas-de-dados-geográficos-1" class="slide level2">
 <h2>Juntando tabelas de dados geográficos</h2>
-<div id="f3b6ce90" class="cell" data-execution_count="51">
+<div id="9b7bbc0d" class="cell" data-execution_count="51">
 <div class="sourceCode cell-code" id="cb75"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb75-1"><a href=""></a>pontos_onibus.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -2501,12 +2501,12 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </section>
 <section id="juntando-tabelas-de-dados-geográficos-2" class="slide level2">
 <h2>Juntando tabelas de dados geográficos</h2>
-<div id="856a75b0" class="cell" data-execution_count="52">
+<div id="c1fb93ae" class="cell" data-execution_count="52">
 <div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb76-1"><a href=""></a><span class="co"># Carregando dados de distritos</span></span>
 <span id="cb76-2"><a href=""></a>url_distritos <span class="op">=</span> <span class="st">"https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&amp;version=2.0.0&amp;request=GetFeature&amp;typeNames=geoportal:distrito_municipal&amp;outputFormat=application/json"</span></span>
 <span id="cb76-3"><a href=""></a>distritos <span class="op">=</span> gpd.read_file(url_distritos)</span>
 <span id="cb76-4"><a href=""></a>distritos.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="52">
+<div class="cell-output cell-output-display" data-execution_count="112">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2625,7 +2625,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </section>
 <section id="juntando-tabelas-de-dados-geográficos-3" class="slide level2">
 <h2>Juntando tabelas de dados geográficos</h2>
-<div id="c50a2b4b" class="cell" data-execution_count="53">
+<div id="9fe7a498" class="cell" data-execution_count="53">
 <div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb77-1"><a href=""></a>distritos.plot(edgecolor<span class="op">=</span><span class="st">"cornflowerblue"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
 <div>
@@ -2638,7 +2638,7 @@ A média de moradias em áreas de risco geológico é: 139</code></pre>
 </section>
 <section id="juntando-tabelas-de-dados-geográficos-4" class="slide level2">
 <h2>Juntando tabelas de dados geográficos</h2>
-<div id="410eeb3c" class="cell" data-execution_count="54">
+<div id="80165b74" class="cell" data-execution_count="54">
 <div class="sourceCode cell-code" id="cb78"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb78-1"><a href=""></a><span class="co"># Conferindo os sistemas de coordenadas</span></span>
 <span id="cb78-2"><a href=""></a><span class="bu">print</span>(<span class="ss">f"Sistema de coordenadas dos pontos de ônibus: </span><span class="sc">{</span>pontos_onibus<span class="sc">.</span>crs<span class="sc">}</span><span class="ss">"</span>)</span>
 <span id="cb78-3"><a href=""></a><span class="bu">print</span>(<span class="ss">f"Sistema de coordenadas dos distritos: </span><span class="sc">{</span>distritos<span class="sc">.</span>crs<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -2651,7 +2651,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </section>
 <section id="juntando-tabelas-de-dados-geográficos-5" class="slide level2">
 <h2>Juntando tabelas de dados geográficos</h2>
-<div id="777e03d1" class="cell" data-execution_count="55">
+<div id="95c8921e" class="cell" data-execution_count="55">
 <div class="sourceCode cell-code" id="cb80" data-code-line-numbers="2|5|"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb80-1"><a href=""></a><span class="co"># Selecionando apenas algumas colunas dos distritos para a junção</span></span>
 <span id="cb80-2"><a href=""></a>colunas_selecionadas <span class="op">=</span> [<span class="st">"nm_distrito_municipal"</span>, <span class="st">"geometry"</span>]</span>
 <span id="cb80-3"><a href=""></a></span>
@@ -2660,7 +2660,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 <span id="cb80-6"><a href=""></a>                          .sjoin(distritos[colunas_selecionadas],</span>
 <span id="cb80-7"><a href=""></a>                          predicate<span class="op">=</span><span class="st">"within"</span>)</span>
 <span id="cb80-8"><a href=""></a>pontos_onibus_distritos.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="55">
+<div class="cell-output cell-output-display" data-execution_count="115">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2694,7 +2694,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 <tbody>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5831</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b07</td>
 <td>770007703</td>
 <td>22</td>
 <td>AV. BSA. DE MURITIBA , 478</td>
@@ -2706,7 +2706,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5832</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b08</td>
 <td>510001729</td>
 <td>22</td>
 <td>PÇA. RUFUS KING LANE , 40</td>
@@ -2718,7 +2718,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5833</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b09</td>
 <td>600005106</td>
 <td>22</td>
 <td>R. WADIH HATTI , 364</td>
@@ -2730,7 +2730,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
-<td>ponto_onibus.fid-21fc7e6_19cb1bfdd91_5834</td>
+<td>ponto_onibus.fid-21fc7e6_19cb20d507c_1b0a</td>
 <td>5808146</td>
 <td>22</td>
 <td>R. SUÍTE DE NATAL , 1294</td>
@@ -2749,14 +2749,14 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </section>
 <section id="juntando-tabelas-de-dados-geográficos-6" class="slide level2">
 <h2>Juntando tabelas de dados geográficos</h2>
-<div id="66d32bed" class="cell" data-execution_count="56">
+<div id="a8247512" class="cell" data-execution_count="56">
 <div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb81-1"><a href=""></a><span class="co"># Contando o número de pontos de ônibus por distrito</span></span>
 <span id="cb81-2"><a href=""></a>pontos_por_distrito <span class="op">=</span> pontos_onibus_distritos<span class="op">\</span></span>
 <span id="cb81-3"><a href=""></a>                      .groupby(<span class="st">"nm_distrito_municipal"</span>)<span class="op">\</span></span>
 <span id="cb81-4"><a href=""></a>                      .size()<span class="op">\</span></span>
 <span id="cb81-5"><a href=""></a>                      .reset_index(name<span class="op">=</span><span class="st">"Número de Pontos de Ônibus"</span>)</span>
 <span id="cb81-6"><a href=""></a>pontos_por_distrito.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="56">
+<div class="cell-output cell-output-display" data-execution_count="116">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2810,7 +2810,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </section>
 <section id="juntando-tabelas-7" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="f1bf01b9" class="cell" data-execution_count="57">
+<div id="52cf1c41" class="cell" data-execution_count="57">
 <div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb82-1"><a href=""></a><span class="co"># Juntando a tabela de pontos de ônibus por distrito com a tabela inicial</span></span>
 <span id="cb82-2"><a href=""></a></span>
 <span id="cb82-3"><a href=""></a>pontos_por_distrito.rename(columns<span class="op">=</span>{<span class="st">"nm_distrito_municipal"</span>: <span class="st">"DISTRITO"</span>},</span>
@@ -2818,7 +2818,7 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 <span id="cb82-5"><a href=""></a></span>
 <span id="cb82-6"><a href=""></a>tabela_distritos <span class="op">=</span> tabela.merge(pontos_por_distrito)</span>
 <span id="cb82-7"><a href=""></a>tabela_distritos.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="57">
+<div class="cell-output cell-output-display" data-execution_count="117">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -2912,11 +2912,11 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </section>
 <section id="juntando-tabelas-8" class="slide level2">
 <h2>Juntando tabelas</h2>
-<div id="242164b2" class="cell" data-execution_count="58">
+<div id="c2fcf131" class="cell" data-execution_count="58">
 <div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb83-1"><a href=""></a><span class="co"># calculando o número de pontos de ônibus por 100.000 habitantes</span></span>
 <span id="cb83-2"><a href=""></a>tabela_distritos[<span class="st">"Pontos de Ônibus por 100.000 habitantes"</span>] <span class="op">=</span> <span class="dv">100000</span> <span class="op">*</span> tabela_distritos[<span class="st">"Número de Pontos de Ônibus"</span>] <span class="op">/</span> tabela_distritos[<span class="st">"Pop. Total 2022"</span>]</span>
 <span id="cb83-3"><a href=""></a>tabela_distritos.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="58">
+<div class="cell-output cell-output-display" data-execution_count="118">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -3020,14 +3020,14 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </section>
 <section id="voltando-os-dados-de-pontos-de-ônibus-para-o-formato-geográfico" class="slide level2">
 <h2>Voltando os dados de pontos de ônibus para o formato geográfico</h2>
-<div id="1d809d52" class="cell" data-execution_count="59">
+<div id="e7c764ff" class="cell" data-execution_count="59">
 <div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb84-1"><a href=""></a>distritos.rename(columns<span class="op">=</span>{<span class="st">"nm_distrito_municipal"</span>: <span class="st">"DISTRITO"</span>},</span>
 <span id="cb84-2"><a href=""></a>                 inplace<span class="op">=</span><span class="va">True</span>)</span>
 <span id="cb84-3"><a href=""></a></span>
 <span id="cb84-4"><a href=""></a>distritos_com_pontos <span class="op">=</span> distritos.merge(tabela_distritos[[<span class="st">"Pontos de Ônibus por 100.000 habitantes"</span>, <span class="st">"DISTRITO"</span>]])</span>
 <span id="cb84-5"><a href=""></a></span>
 <span id="cb84-6"><a href=""></a>distritos_com_pontos.head(<span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="59">
+<div class="cell-output cell-output-display" data-execution_count="119">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -3149,9 +3149,9 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 </div>
 </div>
 </section>
-<section id="visualizando-os-dados" class="slide level2 smaller scrollable">
+<section id="visualizando-os-dados" class="slide level2">
 <h2>Visualizando os dados</h2>
-<div id="01307200" class="cell" data-execution_count="60">
+<div id="1f424f98" class="cell" data-execution_count="60">
 <div class="sourceCode cell-code" id="cb85"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb85-1"><a href=""></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
 <span id="cb85-2"><a href=""></a></span>
 <span id="cb85-3"><a href=""></a><span class="co"># Definindo o tamanho da figura</span></span>
@@ -3173,12 +3173,6 @@ Sistema de coordenadas dos distritos: EPSG:31983</code></pre>
 <span id="cb85-19"><a href=""></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
-
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-pythongis" class="csl-entry" role="listitem">
-Tenkanen, Henrikki, Vuokko Heikinheimo, and David Whipp. 2025. <span>“Python for Geographic Data Analysis.”</span> <a href="https://pythongis.org/index.html">https://pythongis.org/index.html</a>.
-</div>
-</div>
 </section><section id="visualizando-os-dados-output" class="slide level2 output-location-slide"><h2>Visualizando os dados</h2><div class="cell output-location-slide" data-execution_count="60">
 <div class="cell-output cell-output-display">
 <pre><code>&lt;Figure size 960x960 with 0 Axes&gt;</code></pre>
@@ -3191,6 +3185,24 @@ Tenkanen, Henrikki, Vuokko Heikinheimo, and David Whipp. 2025. <span>“Python f
 </div>
 </div>
 </div></section></section>
+<section id="referências" class="title-slide slide level1 smaller scrollable">
+<h1>Referências</h1>
+
+<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-geopandas_doc" class="csl-entry" role="listitem">
+GeoPandas developers. 2026. <span>“GeoPandas Documentation.”</span> <a href="https://geopandas.org/">https://geopandas.org/</a>.
+</div>
+<div id="ref-mckinney_pandas" class="csl-entry" role="listitem">
+McKinney, Wes. 2022. <em>Python for Data Analysis: Data Wrangling with Pandas, NumPy, and Jupyter</em>. 3rd ed. O’Reilly Media. <a href="https://wesmckinney.com/book/">https://wesmckinney.com/book/</a>.
+</div>
+<div id="ref-pythongis" class="csl-entry" role="listitem">
+Tenkanen, Henrikki, Vuokko Heikinheimo, and David Whipp. 2025. <span>“Python for Geographic Data Analysis.”</span> <a href="https://pythongis.org/index.html">https://pythongis.org/index.html</a>.
+</div>
+<div id="ref-pandas_doc" class="csl-entry" role="listitem">
+The pandas development team. 2026. <span>“Pandas Documentation.”</span> <a href="https://pandas.pydata.org/">https://pandas.pydata.org/</a>.
+</div>
+</div>
+</section>
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
