@@ -619,6 +619,7 @@ distritos = gpd.read_file(url_distritos)
 distritos.head(4)
 ```
 
+## Juntando tabelas de dados geográficos
 
 ```{python}
 #| echo: true
@@ -639,11 +640,14 @@ print(f"Sistema de coordenadas dos distritos: {distritos.crs}")
 
 ```{python}
 #| echo: true
+#| code-line-numbers: "2|5|"
 # Selecionando apenas algumas colunas dos distritos para a junção
 colunas_selecionadas = ["nm_distrito_municipal", "geometry"]
 
 # Juntando os pontos de ônibus com os distritos
-pontos_onibus_distritos = pontos_onibus.sjoin(distritos[colunas_selecionadas], how="left", predicate="within")
+pontos_onibus_distritos = pontos_onibus\
+                          .sjoin(distritos[colunas_selecionadas],
+                          predicate="within")
 pontos_onibus_distritos.head(4)
 ```
 
@@ -696,7 +700,12 @@ distritos_com_pontos = distritos.merge(tabela_distritos[["Pontos de Ônibus por 
 distritos_com_pontos.head(4)
 ```
 
+## Visualizando os dados
+
 ```{python}
+# | echo: true
+# | output-location: slide
+
 import matplotlib.pyplot as plt
 
 # Definindo o tamanho da figura
