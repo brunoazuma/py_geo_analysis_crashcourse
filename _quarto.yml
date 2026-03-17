@@ -3,5 +3,7 @@ project:
   output-dir: _output
 
 author: "Bruno Azuma Balzano"
-format: revealjs
+format:
+  revealjs:
+    embed-resources: true
 bibliography: references.bib
