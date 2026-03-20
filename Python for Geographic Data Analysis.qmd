@@ -340,7 +340,8 @@ tabela.sort_values("Pop. Rural 2022", ascending=False).head(4)
 #| echo: true
 # Criando uma nova coluna de percentual de população rural
 tabela["% Pop. Rural 2022"] = 100 * tabela["Pop. Rural 2022"] / tabela["Pop. Total 2022"]
-tabela.sort_values("% Pop. Rural 2022", ascending=False).head(4)
+tabela.drop(columns="Pop. Urb. 2022")\
+    .sort_values("% Pop. Rural 2022", ascending=False).head(4)
 ```
 
 ## Renomeando colunas
@@ -358,7 +359,8 @@ tabela.head(4)
 # Criando coluna para os 10 distritos mais populosos
 tabela["Posto_numerico"] = tabela["Posto"].str.rstrip(".º").astype(int)
 tabela.sort_values("Posto_numerico", inplace=True)
-tabela.head(4)
+cols = ["Posto", "Distrito", "Pop. Total 2022", "Posto_numerico"]
+tabela[cols].head(3)
 ```
 
 ## Renomeando colunas
@@ -367,7 +369,7 @@ tabela.head(4)
 #| echo: true
 # Criando coluna para os 10 distritos mais populosos
 tabela["Dez mais populosos"] = tabela["Posto_numerico"] <= 10
-tabela.head(4)
+tabela[cols].head(4)
 ```
 
 ## Agrupando e agregando dados
@@ -394,7 +396,8 @@ tabela.groupby("Dez mais populosos")[["Pop. Total 2022"]].sum()/pop_total*100
 # Carregando dados de escolas
 url_escolas = "https://dados.prefeitura.sp.gov.br/dataset/8da55b0e-b385-4b54-9296-d0000014ddd5/resource/a12ad63d-d944-4e35-9aac-71a5ae0b7bdf/download/escolas122022.csv"
 escolas = pd.read_csv(url_escolas, sep=";", encoding="latin1")
-escolas.head(4)
+print(f"A tabela de escolas possui {escolas.shape[0]} linhas e {escolas.shape[1]} colunas.")
+escolas.head(3)
 ```
 
 ## Juntando tabelas
@@ -422,6 +425,10 @@ escolas_distrito.head(4)
 
 
 ## Juntando tabelas
+
+```{python}
+pd.set_option('display.max_columns', 5)
+```
 
 ```{python}
 #| echo: true
@@ -464,25 +471,43 @@ tabela_juntada.head(4)
 
 ## Formatos de arquivos de dados geográficos
 
-::: {.incremental}
 - **Shapefile**: Formato popular para dados vetoriais, suportado por muitos sistemas de informação geográfica (SIG). Possui uma estrutura de arquivos múltiplos (.shp, .shx, .dbf) que armazenam diferentes aspectos dos dados e algumas limitações associadas à época de desenvolvimento do formato.
+
+## Formatos de arquivos de dados geográficos
+
 - **GeoJSON**: Formato aberto baseado em JSON para representar dados geográficos, amplamente utilizado em aplicações web. Porém, por ser baseado em texto, pode ser menos eficiente para grandes volumes de dados em comparação com formatos binários.
+
+## Formatos de arquivos de dados geográficos
+
 - **GeoPackage (GPKG)**: Formato aberto de arquivo de banco de dados SQLite para dados geoespaciais, suportando tanto dados vetoriais quanto raster, além de suportar várias camadas em um único arquivo.
+
+## Formatos de arquivos de dados geográficos
+
 - **GeoParquet**: Formato de arquivo baseado em Parquet para dados geoespaciais, projetado para ser eficiente em termos de armazenamento e desempenho, especialmente para grandes volumes de dados. Ele é otimizado para leitura e escrita rápida de todos os registros, tornando-o adequado para análise de dados geográficos em larga escala.
+
+## Formatos de arquivos de dados geográficos
+
 - **KML**: Menos utilizado do que os outros formatos no mundo do python, é um formato XML usado para representar dados geográficos em aplicativos como Google Earth.
-:::
 
 ## Sistemas de referência de coordenadas (CRS)
 
 Possui tipicamente três componentes principais:
 
-::: {.incremental}
 1. **Datum**: Referência geodésica que relaciona o sistema de coordenadas com a superfície da Terra. É o que define o tamanho e a forma da Terra, como uma esfera, um elipsóide ou um geoide. Além disso, o datum define a posição do sistema de coordenadas em relação à Terra.
+
+## Sistemas de referência de coordenadas (CRS)
+
+Possui tipicamente três componentes principais:
+
 2. **Projeção**: Método utilizado para representar a superfície curva da Terra em um plano. Existem várias projeções, cada uma com suas próprias distorções e usos específicos.
-3. **Parâmetros adicionais**: Informações que podem ser usadas para ajustar a representação dos dados geográficos, como a escala e o meridiano central.
-:::
 
 **Observação**: existem sistemas de referência de coordenadas sem projeção, chamados de sistemas de coordenadas geográficas, que utilizam latitude e longitude para representar a localização na superfície da Terra.
+
+## Sistemas de referência de coordenadas (CRS)
+
+Possui tipicamente três componentes principais:
+
+3. **Parâmetros adicionais**: Informações que podem ser usadas para ajustar a representação dos dados geográficos, como a escala e o meridiano central.
 
 ## Projeção de dados geográficos
 
@@ -601,7 +626,7 @@ url_geojson = "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=W
 pontos_onibus = gpd.read_file(url_geojson)
 
 # Exibe as primeiras linhas da tabela com a geometria
-pontos_onibus.head()
+pontos_onibus.drop(columns=['id']).head()
 ```
 
 ## Juntando tabelas de dados geográficos
@@ -618,7 +643,7 @@ pontos_onibus.plot()
 # Carregando dados de distritos
 url_distritos = "https://wfs.geosampa.prefeitura.sp.gov.br/geoserver/ows?service=WFS&version=2.0.0&request=GetFeature&typeNames=geoportal:distrito_municipal&outputFormat=application/json"
 distritos = gpd.read_file(url_distritos)
-distritos.head(4)
+distritos.drop(columns=['id']).head(2)
 ```
 
 ## Juntando tabelas de dados geográficos
@@ -642,7 +667,7 @@ print(f"Sistema de coordenadas dos distritos: {distritos.crs}")
 
 ```{python}
 #| echo: true
-#| code-line-numbers: "2|5|"
+#| code-line-numbers: "|2|5-7|"
 # Selecionando apenas algumas colunas dos distritos para a junção
 colunas_selecionadas = ["nm_distrito_municipal", "geometry"]
 
@@ -678,28 +703,40 @@ tabela_distritos = tabela.merge(pontos_por_distrito)
 tabela_distritos.head(4)
 ```
 
+Agora temos uma tabela com os dados de população e o número de pontos de ônibus por distrito, o que nos permitirá realizar análises mais aprofundadas sobre a relação entre esses dois aspectos.
+
+```{python}
+#| echo: true
+
+cols = ["Posto", "Distrito", "Pop. Total 2022", "Número de Pontos de Ônibus"]
+tabela_distritos[cols].head(3)
+```
+
 ## Juntando tabelas
 
 ```{python}
 #| echo: true
 # calculando o número de pontos de ônibus por 100.000 habitantes
 tabela_distritos["Pontos de Ônibus por 100.000 habitantes"] = 100000 * tabela_distritos["Número de Pontos de Ônibus"] / tabela_distritos["Pop. Total 2022"]
-tabela_distritos.head(4)
+tabela_distritos.head(3)
 ```
 
-# BÔNUS: Visualização de dados geográficos com Python
+# Visualização de dados geográficos com Python
 
 ## Voltando os dados de pontos de ônibus para o formato geográfico
 
 ```{python}
 #| echo: true
+#| output-location: slide
 
 distritos.rename(columns={"nm_distrito_municipal": "DISTRITO"},
                  inplace=True)
 
 distritos_com_pontos = distritos.merge(tabela_distritos[["Pontos de Ônibus por 100.000 habitantes", "DISTRITO"]])
 
-distritos_com_pontos.head(4)
+cols = ["DISTRITO", "Pontos de Ônibus por 100.000 habitantes", "geometry"]
+
+distritos_com_pontos[cols].head(4)
 ```
 
 ## Visualizando os dados
